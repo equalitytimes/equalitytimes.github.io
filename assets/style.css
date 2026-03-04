@@ -47,9 +47,25 @@ img{max-width:100%;display:block}
   display:flex;align-items:center;gap:12px;min-width:240px;
 }
 .brand-logo{
-  width:48px;height:48px;border-radius:14px;
-  overflow:hidden;background:#fff;border:1px solid var(--line);
-  box-shadow: var(--shadow);
+  width:72px;
+  height:72px;
+  border-radius:20px;
+  overflow:hidden;
+  background:#ffffff;
+  border:1px solid #ead28a;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
+
+.brand-logo img{
+  width:88%;
+  height:88%;
+  object-fit:contain;
+  padding:0;
+  display:block;
+}
 }
 .brand-logo img{width:100%;height:100%;object-fit:contain;padding:6px}
 .brand-title{font-weight:900;letter-spacing:.2px}

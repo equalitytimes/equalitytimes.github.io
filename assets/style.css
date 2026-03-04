@@ -141,7 +141,8 @@ img{max-width:100%;display:block}
   border:none;
   border-radius:var(--radius-lg);
   padding:28px;
-  box-shadow:none;
+  box-shadow:0 8px 24px rgba(31,36,48,.04);
+}
 }
 }
 .hero-badge{

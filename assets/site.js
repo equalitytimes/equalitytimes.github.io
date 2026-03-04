@@ -6,7 +6,7 @@ const SITE = {
   },
 
   videos: [
-    { id: "Yq1A679OP5rxcXiO", title: "Why Did India Introduce New Lady Justice?" },
+    { id: "hpr_9JVPcds", title: "Why Did India Introduce New Lady Justice?" },
     { id: "bwz0qGBASAA", title: "Caste In Japan | Dark Side of Japan" },
     { id: "s9ixtr52ewA", title: "The Caste System's Dirty Secret" },
     { id: "Sj47ugvKkNI", title: "Who You Are? VEG or NON-VEG? | Religion and Diet" },

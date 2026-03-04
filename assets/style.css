@@ -579,3 +579,105 @@ img{max-width:100%;display:block}
     font-size:26px;
   }
 }
+/* ===== HERO GIF BACKGROUND CARD ===== */
+.hero-card{
+  position:relative;
+  border-radius:34px;
+  overflow:hidden;
+  box-shadow:var(--shadow-lg);
+  border:1px solid rgba(236,220,167,.55);
+}
+
+.hero-gif-bg{
+  /* Put your GIF here */
+  background-image: url("hero-poster.gif");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  min-height:520px;
+}
+
+/* IMPORTANT: if your gif is inside /assets/ folder */
+.hero-gif-bg{
+  background-image: url("assets/hero-poster.gif");
+}
+
+/* Soft overlay so text remains readable */
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg, rgba(255,253,246,.92) 0%, rgba(255,253,246,.86) 100%),
+    radial-gradient(700px 380px at 20% 20%, rgba(244,180,0,.18), transparent 60%),
+    radial-gradient(600px 320px at 90% 30%, rgba(244,180,0,.10), transparent 60%);
+}
+
+/* Content stays above overlay */
+.hero-content{
+  position:relative;
+  z-index:2;
+  padding:30px;
+}
+
+.hero-top{
+  margin-bottom:14px;
+}
+
+.hero-grid2{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:18px;
+  align-items:start;
+}
+
+.hero-main h1{
+  margin:0 0 12px;
+  font-size:64px;
+  line-height:.96;
+  letter-spacing:-1.7px;
+}
+
+.hero-main p{
+  margin:0;
+  color:#5e687b;
+  font-size:17px;
+  line-height:1.82;
+  max-width:60ch;
+}
+
+.hero-side{
+  display:grid;
+  gap:14px;
+}
+
+/* Make mini cards slightly translucent so GIF feel continues */
+.hero-mini-card{
+  background:rgba(255,255,255,.86);
+  border:1px solid rgba(236,220,167,.7);
+  border-radius:22px;
+  padding:18px;
+  box-shadow:var(--shadow-sm);
+  backdrop-filter:blur(6px);
+}
+
+.hero-mini-card h3{
+  margin:0 0 8px;
+  font-size:18px;
+}
+
+.hero-mini-card p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.65;
+}
+
+/* Responsive */
+@media (max-width: 1100px){
+  .hero-main h1{font-size:54px}
+}
+@media (max-width: 980px){
+  .hero-grid2{grid-template-columns:1fr}
+  .hero-gif-bg{min-height:unset}
+  .hero-content{padding:22px}
+  .hero-main h1{font-size:42px}
+}

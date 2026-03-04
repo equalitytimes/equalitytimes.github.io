@@ -29,7 +29,7 @@ const SITE = {
       note: "A story connecting caste, higher education, and the legal reasoning that shaped a landmark outcome."
     },
     {
-      title: "Monika Gawande from small village working on Energy Efficiency project under his Superviser Prof.Roger Shen",
+      title: "From a small village to advanced research, Monika Gawande is now working on an Energy Efficiency project under the supervision of Prof. Roger Shen.",
       source: "Spectrum News 1",
       date: "2025",
       link: "https://spectrumnews1.com/wi/milwaukee/news/2025/09/17/uwm-data-center-research",

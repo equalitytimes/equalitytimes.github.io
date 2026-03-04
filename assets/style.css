@@ -49,14 +49,22 @@ img{max-width:100%;display:block}
 .brand-logo{
   width:72px;
   height:72px;
-  border-radius:20px;
-  overflow:hidden;
-  background:#ffffff;
-  border:1px solid #ead28a;
+  border-radius:0;
+  overflow:visible;
+  background:transparent;
+  border:none;
+  box-shadow:none;
   display:flex;
   align-items:center;
   justify-content:center;
-  box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
+
+.brand-logo img{
+  width:72px;
+  height:72px;
+  object-fit:contain;
+  padding:0;
+}
 }
 
 .brand-logo img{

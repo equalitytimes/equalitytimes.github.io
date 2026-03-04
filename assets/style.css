@@ -579,105 +579,149 @@ img{max-width:100%;display:block}
     font-size:26px;
   }
 }
-/* ===== HERO GIF BACKGROUND CARD ===== */
-.hero-card{
-  position:relative;
-  border-radius:34px;
-  overflow:hidden;
-  box-shadow:var(--shadow-lg);
-  border:1px solid rgba(236,220,167,.55);
+/* ===== HERO ===== */
+.hero{
+  padding:38px 0 18px;
 }
 
-.hero-gif-bg{
-  /* Put your GIF here */
-  background-image: url("hero-poster.gif");
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:center;
-  min-height:520px;
-}
-
-/* IMPORTANT: if your gif is inside /assets/ folder */
-.hero-gif-bg{
-  background-image: url("assets/hero-poster.gif");
-}
-
-/* Soft overlay so text remains readable */
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(180deg, rgba(255,253,246,.92) 0%, rgba(255,253,246,.86) 100%),
-    radial-gradient(700px 380px at 20% 20%, rgba(244,180,0,.18), transparent 60%),
-    radial-gradient(600px 320px at 90% 30%, rgba(244,180,0,.10), transparent 60%);
-}
-
-/* Content stays above overlay */
-.hero-content{
-  position:relative;
-  z-index:2;
-  padding:30px;
-}
-
-.hero-top{
-  margin-bottom:14px;
-}
-
-.hero-grid2{
+.hero-grid{
   display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:18px;
-  align-items:start;
+  grid-template-columns:1.08fr .92fr;
+  gap:22px;
+  align-items:stretch;
 }
 
-.hero-main h1{
-  margin:0 0 12px;
+.hero-copy{
+  background:linear-gradient(180deg,#fff8e1 0%, #fffef9 100%);
+  border:1px solid rgba(236,220,167,.72);
+  border-radius:32px;
+  padding:30px;
+  box-shadow:var(--shadow-md);
+}
+
+.hero-badge{
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+  padding:10px 14px;
+  border-radius:999px;
+  background:#fff1bc;
+  border:1px solid #efd877;
+  color:#6b5400;
+  font-weight:800;
+  font-size:13px;
+}
+
+.hero-dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:var(--yellow-dark);
+}
+
+.hero h1{
+  margin:18px 0 12px;
   font-size:64px;
   line-height:.96;
-  letter-spacing:-1.7px;
+  letter-spacing:-1.6px;
 }
 
-.hero-main p{
+.hero p{
   margin:0;
   color:#5e687b;
   font-size:17px;
   line-height:1.82;
-  max-width:60ch;
+  max-width:58ch;
 }
 
-.hero-side{
+.hero-actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:22px;
+}
+
+.hero-kpis{
   display:grid;
+  grid-template-columns:repeat(2,1fr);
   gap:14px;
+  margin-top:24px;
 }
 
-/* Make mini cards slightly translucent so GIF feel continues */
-.hero-mini-card{
-  background:rgba(255,255,255,.86);
-  border:1px solid rgba(236,220,167,.7);
-  border-radius:22px;
-  padding:18px;
+.kpi{
+  background:rgba(255,255,255,.96);
+  border:1px solid rgba(236,220,167,.72);
+  border-radius:20px;
+  padding:16px;
   box-shadow:var(--shadow-sm);
-  backdrop-filter:blur(6px);
 }
 
-.hero-mini-card h3{
-  margin:0 0 8px;
-  font-size:18px;
+.kpi-title{
+  font-weight:900;
+  margin-bottom:6px;
+  font-size:15px;
 }
 
-.hero-mini-card p{
-  margin:0;
+.kpi-text{
   color:var(--muted);
+  font-size:13px;
   line-height:1.65;
 }
 
-/* Responsive */
-@media (max-width: 1100px){
-  .hero-main h1{font-size:54px}
+.hero-poster{
+  background:#fff;
+  border:1px solid rgba(236,220,167,.72);
+  border-radius:32px;
+  overflow:hidden;
+  box-shadow:var(--shadow-md);
+  min-height:100%;
+  display:flex;
 }
+
+.hero-poster img{
+  width:100%;
+  height:100%;
+  min-height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* responsive */
+@media (max-width: 1100px){
+  .hero h1{
+    font-size:54px;
+  }
+}
+
 @media (max-width: 980px){
-  .hero-grid2{grid-template-columns:1fr}
-  .hero-gif-bg{min-height:unset}
-  .hero-content{padding:22px}
-  .hero-main h1{font-size:42px}
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero-kpis{
+    grid-template-columns:1fr;
+  }
+
+  .hero-poster{
+    min-height:300px;
+  }
+
+  .hero-poster img{
+    min-height:300px;
+  }
+}
+
+@media (max-width: 640px){
+  .hero{
+    padding-top:24px;
+  }
+
+  .hero-copy{
+    padding:22px;
+  }
+
+  .hero h1{
+    font-size:42px;
+    line-height:1.02;
+  }
 }

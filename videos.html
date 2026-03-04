@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Videos | Equality Times</title>
+  <meta name="description" content="Watch Equality Times videos on law, equality, human rights, and social justice."/>
+  <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
 
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="index.html">
+      <div class="brand-logo"><img src="assets/logo.png" alt="Equality Times logo"></div>
+      <div>
+        <div class="brand-title">Equality Times</div>
+        <div class="brand-sub">Constitution • Equality • Human Rights • Legal Awareness</div>
+      </div>
+    </a>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a class="active" href="videos.html">Videos</a>
+      <a href="news.html">Legal News</a>
+      <a href="research.html">Research</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Videos</h2>
+        <p class="section-note">Educational and investigative content from Equality Times</p>
+      </div>
+
+      <div class="card" style="margin-bottom:18px;">
+        <h3>How to add more videos</h3>
+        <p>
+          Open <strong>assets/site.js</strong> and edit the <strong>videos</strong> list.
+          For each YouTube video, use the part after <strong>watch?v=</strong> as the ID.
+        </p>
+      </div>
+
+      <div id="videosGrid" class="video-grid"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-text">© <span id="yr"></span> Equality Times</div>
+    <div class="footer-text">Public Legal Education Platform • equalitytimesindia@gmail.com</div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

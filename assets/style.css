@@ -662,3 +662,7 @@ img{max-width:100%;display:block}
     min-height: 220px;
   }
 }
+.social-row-home{
+  margin-top:-18px; /* pulls it up into the empty space */
+  margin-bottom:18px;
+}

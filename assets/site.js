@@ -64,6 +64,7 @@ const SITE = {
       year: "2026",
       file: "papers/artificial-intelligence-and-right-to-equality.pdf",
       note: "A legal research paper examining artificial intelligence through the lens of equality, fairness, and constitutional rights."
+      image: "assets/research-ai-equality.jpg",
     }
   ],
 

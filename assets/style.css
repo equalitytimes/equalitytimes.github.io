@@ -666,3 +666,60 @@ img{max-width:100%;display:block}
   margin-top:-18px; /* pulls it up into the empty space */
   margin-bottom:18px;
 }
+/* ===== Social buttons (Home) ===== */
+.social-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.social-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 12px;
+  border-radius:999px;
+  border:1px solid var(--line-soft);
+  background:#fff;
+  box-shadow:var(--shadow-sm);
+  font-weight:800;
+  font-size:13px;
+  transition:.18s ease;
+}
+
+.social-btn:hover{
+  transform:translateY(-1px);
+  border-color:#f0dd98;
+  background:#fff8e6;
+}
+
+.social-icon{
+  width:34px;
+  height:34px;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--yellow-soft);
+  border:1px solid #f0dd98;
+}
+
+.social-icon svg{
+  fill:#6b5400;
+}
+
+.social-text{
+  white-space:nowrap;
+}
+
+/* Disabled buttons until links are ready */
+.is-disabled{
+  opacity:.55;
+  pointer-events:none;
+}
+
+/* Mobile: icons only */
+@media (max-width:520px){
+  .social-text{display:none;}
+  .social-btn{padding:10px;}
+}

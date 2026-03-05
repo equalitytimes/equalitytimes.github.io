@@ -165,20 +165,6 @@ function renderPapers(targetId, count = SITE.papers.length){
   `).join("");
 }
 
-function renderFounderCompact(targetId){
-  const el = byId(targetId);
-  if(!el) return;
-  el.innerHTML = `
-    <div class="card">
-      <h3>Founder</h3>
-      <p><strong>${escapeHtml(SITE.founder.name)}</strong></p>
-      <p>${escapeHtml(SITE.founder.role)}</p>
-      <div style="height:12px"></div>
-      <a class="btn btn-secondary" href="about.html">Read more</a>
-    </div>
-  `;
-}
-
 function fillFounderPage(){
   const name = byId("founderName");
   const role = byId("founderRole");

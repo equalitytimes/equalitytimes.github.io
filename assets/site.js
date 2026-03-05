@@ -147,13 +147,10 @@ function renderPapers(targetId, count = SITE.papers.length){
   el.innerHTML = items.map(p => `
     <article class="paper-card">
       <div class="news-media">
-        ${p.image
-          ? `<img src="${p.image}" alt="${escapeHtml(p.title)}">`
-          : `<div class="news-fallback">
-               <div class="nf-source">Research</div>
-               <div class="nf-title">Paper</div>
-             </div>`
-        }
+        <div class="news-fallback">
+          <div class="nf-source">Research</div>
+          <div class="nf-title">Paper</div>
+        </div>
       </div>
       <div class="paper-body">
         <h3 class="paper-title">${escapeHtml(p.title)}</h3>
@@ -167,6 +164,50 @@ function renderPapers(targetId, count = SITE.papers.length){
   `).join("");
 }
 
+function renderFounderCompact(targetId){
+  const el = byId(targetId);
+  if(!el) return;
+  el.innerHTML = `
+    <div class="card">
+      <h3>Founder</h3>
+      <p><strong>${escapeHtml(SITE.founder.name)}</strong></p>
+      <p>${escapeHtml(SITE.founder.role)}</p>
+      <div style="height:12px"></div>
+      <a class="btn btn-secondary" href="about.html">Read more</a>
+    </div>
+  `;
+}
+
+function fillFounderPage(){
+  const name = byId("founderName");
+  const role = byId("founderRole");
+  const bio = byId("founderBio");
+  if(name) name.textContent = SITE.founder.name;
+  if(role) role.textContent = SITE.founder.role;
+  if(bio) bio.textContent = SITE.founder.bio;
+}
+
+function fillContact(){
+  const email = byId("contactEmail");
+  const emailLink = byId("contactEmailLink");
+  const ytLink = byId("ytLink");
+  if(email) email.textContent = SITE.contact.email;
+  if(emailLink) emailLink.href = `mailto:${SITE.contact.email}`;
+  if(ytLink) ytLink.href = SITE.contact.youtube;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  yearFill();
+  renderVideos("videosFeatured", 3);
+  renderVideos("videosGrid");
+  renderNews("newsFeatured", 3);
+  renderNews("newsList");
+  renderPapers("researchFeatured", 1);
+  renderPapers("papersList");
+  renderFounderCompact("founderCompact");
+  fillFounderPage();
+  fillContact();
+}
 function fillFounderPage(){
   const name = byId("founderName");
   const role = byId("founderRole");

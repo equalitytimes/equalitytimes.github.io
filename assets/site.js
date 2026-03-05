@@ -59,29 +59,41 @@ const SITE = {
   ],
 
   papers: [
-  {
-    title: "Artificial Intelligence and Right to Equality",
-    year: "2026",
-    file: "papers/artificial-intelligence-and-right-to-equality.pdf",
-    image: "assets/research-ai-equality.jpg",
-    note: "A legal research paper examining artificial intelligence through the lens of equality, fairness, and constitutional rights."
-  }
-]
+    {
+      title: "Artificial Intelligence and Right to Equality",
+      year: "2026",
+      file: "papers/artificial-intelligence-and-right-to-equality.pdf",
+      image: "assets/research-ai-equality.jpg",
+      note: "A legal research paper examining artificial intelligence through the lens of equality, fairness, and constitutional rights."
+    }
+  ],
+
   contact: {
     email: "equalitytimesindia@gmail.com",
     youtube: "https://youtube.com/@equalitytimes?si=55bJiI7Zwe0l3qLC"
   }
 };
 
-function byId(id){ return document.getElementById(id); }
-function youtubeThumb(id){ return `https://img.youtube.com/vi/${id}/hqdefault.jpg`; }
+function byId(id){ 
+  return document.getElementById(id); 
+}
+
+function youtubeThumb(id){ 
+  return `https://img.youtube.com/vi/${id}/hqdefault.jpg`; 
+}
+
 function yearFill(){
   const el = byId("yr");
   if(el) el.textContent = new Date().getFullYear();
 }
+
 function escapeHtml(str){
   return String(str ?? "").replace(/[&<>"']/g, m => ({
-    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+    "&":"&amp;",
+    "<":"&lt;",
+    ">":"&gt;",
+    '"':"&quot;",
+    "'":"&#39;"
   }[m]));
 }
 
@@ -147,10 +159,14 @@ function renderPapers(targetId, count = SITE.papers.length){
   el.innerHTML = items.map(p => `
     <article class="paper-card">
       <div class="news-media">
-        <div class="news-fallback">
-          <div class="nf-source">Research</div>
-          <div class="nf-title">Paper</div>
-        </div>
+        ${
+          p.image
+            ? `<img src="${p.image}" alt="${escapeHtml(p.title)}">`
+            : `<div class="news-fallback">
+                <div class="nf-source">Research</div>
+                <div class="nf-title">Paper</div>
+              </div>`
+        }
       </div>
       <div class="paper-body">
         <h3 class="paper-title">${escapeHtml(p.title)}</h3>
@@ -167,6 +183,7 @@ function renderPapers(targetId, count = SITE.papers.length){
 function renderFounderCompact(targetId){
   const el = byId(targetId);
   if(!el) return;
+
   el.innerHTML = `
     <div class="card">
       <h3>Founder</h3>
@@ -182,6 +199,7 @@ function fillFounderPage(){
   const name = byId("founderName");
   const role = byId("founderRole");
   const bio = byId("founderBio");
+
   if(name) name.textContent = SITE.founder.name;
   if(role) role.textContent = SITE.founder.role;
   if(bio) bio.textContent = SITE.founder.bio;
@@ -191,36 +209,7 @@ function fillContact(){
   const email = byId("contactEmail");
   const emailLink = byId("contactEmailLink");
   const ytLink = byId("ytLink");
-  if(email) email.textContent = SITE.contact.email;
-  if(emailLink) emailLink.href = `mailto:${SITE.contact.email}`;
-  if(ytLink) ytLink.href = SITE.contact.youtube;
-}
 
-document.addEventListener("DOMContentLoaded", () => {
-  yearFill();
-  renderVideos("videosFeatured", 3);
-  renderVideos("videosGrid");
-  renderNews("newsFeatured", 3);
-  renderNews("newsList");
-  renderPapers("researchFeatured", 1);
-  renderPapers("papersList");
-  renderFounderCompact("founderCompact");
-  fillFounderPage();
-  fillContact();
-}
-function fillFounderPage(){
-  const name = byId("founderName");
-  const role = byId("founderRole");
-  const bio = byId("founderBio");
-  if(name) name.textContent = SITE.founder.name;
-  if(role) role.textContent = SITE.founder.role;
-  if(bio) bio.textContent = SITE.founder.bio;
-}
-
-function fillContact(){
-  const email = byId("contactEmail");
-  const emailLink = byId("contactEmailLink");
-  const ytLink = byId("ytLink");
   if(email) email.textContent = SITE.contact.email;
   if(emailLink) emailLink.href = `mailto:${SITE.contact.email}`;
   if(ytLink) ytLink.href = SITE.contact.youtube;

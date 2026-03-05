@@ -1,8 +1,8 @@
 const SITE = {
   founder: {
     name: "Harshal Manoharrao Gawande",
-    role: "Founder, Equality Times",
-    bio: "Equality Times is a public legal education initiative focused on constitutional law, equality, human rights, and legal awareness. It seeks to make law understandable for students, citizens, and communities through research-based explainers, videos, legal news, and public-interest analysis."
+    role: "Law Student | Founder, Equality Times",
+    bio: "Harshal Manoharrao Gawande is a law student and the founder of Equality Times, a public legal education initiative focused on constitutional law, equality, human rights, and legal awareness. Through research-based explainers, videos, legal news, and public-interest analysis, he aims to make law understandable and accessible for students, citizens, and marginalized communities."
   },
 
   videos: [

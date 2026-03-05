@@ -147,10 +147,13 @@ function renderPapers(targetId, count = SITE.papers.length){
   el.innerHTML = items.map(p => `
     <article class="paper-card">
       <div class="news-media">
-        <div class="news-fallback">
-          <div class="nf-source">Research</div>
-          <div class="nf-title">Paper</div>
-        </div>
+        ${p.image
+          ? `<img src="${p.image}" alt="${escapeHtml(p.title)}">`
+          : `<div class="news-fallback">
+               <div class="nf-source">Research</div>
+               <div class="nf-title">Paper</div>
+             </div>`
+        }
       </div>
       <div class="paper-body">
         <h3 class="paper-title">${escapeHtml(p.title)}</h3>

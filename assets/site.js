@@ -59,15 +59,14 @@ const SITE = {
   ],
 
   papers: [
-    {
-      title: "Artificial Intelligence and Right to Equality",
-      year: "2026",
-      file: "papers/artificial-intelligence-and-right-to-equality.pdf",
-      note: "A legal research paper examining artificial intelligence through the lens of equality, fairness, and constitutional rights."
-      image: "assets/research-ai-equality.jpg",
-    }
-  ],
-
+  {
+    title: "Artificial Intelligence and Right to Equality",
+    year: "2026",
+    file: "papers/artificial-intelligence-and-right-to-equality.pdf",
+    image: "assets/research-ai-equality.jpg",
+    note: "A legal research paper examining artificial intelligence through the lens of equality, fairness, and constitutional rights."
+  }
+]
   contact: {
     email: "equalitytimesindia@gmail.com",
     youtube: "https://youtube.com/@equalitytimes?si=55bJiI7Zwe0l3qLC"

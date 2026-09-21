@@ -1,11 +1,14 @@
+---
+layout: null
+permalink: /team.html
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Contact | Equality Times</title>
-  <meta name="description" content="Contact Equality Times for collaboration, suggestions, and legal awareness initiatives."/>
-  <link rel="stylesheet" href="/assets/style.css"/>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Team | Equality Times</title>
+<meta name="description" content="The people and contributors helping build Equality Times.">
+<link rel="stylesheet" href="/assets/style.css">
 <style>
 .site-header{background:#080d11!important;color:#fff!important;width:100%!important;position:relative!important;z-index:100!important}
 .site-header-inner{width:min(1180px,calc(100% - 56px))!important;min-height:88px!important;margin:0 auto!important;padding:0!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:30px!important}
@@ -21,68 +24,27 @@
 </style>
 </head>
 <body>
-
 <header class="site-header">
   <div class="site-header-inner">
-    <a class="site-brand" href="/" aria-label="Equality Times home"><img src="https://raw.githubusercontent.com/equalitytimes/equalitytimes-test/main/assets/logo-new.png" alt="Equality Times"><span class="site-brand-tagline">LEGAL EDUCATION&nbsp;&nbsp;•&nbsp;&nbsp;RESEARCH&nbsp;&nbsp;•&nbsp;&nbsp;PUBLIC AWARENESS</span></a>
+    <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="Equality Times home"><img src="https://raw.githubusercontent.com/equalitytimes/equalitytimes-test/main/assets/logo-new.png" alt="Equality Times"><span class="site-brand-tagline">LEGAL EDUCATION&nbsp;&nbsp;•&nbsp;&nbsp;RESEARCH&nbsp;&nbsp;•&nbsp;&nbsp;PUBLIC AWARENESS</span></a>
     <nav class="site-nav" aria-label="Main navigation">
-      <a href="/">Home</a>
-      <a href="/about/">About</a>
-      <a href="/articles/">Articles</a>
-      <a href="/videos/">Videos</a>
-      <a href="/research/">Research</a>
-      <a href="/team/">Our Team</a>
-      <a href="/contact/" class="active">Contact</a>
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/about/' | relative_url }}">About</a>
+      <a href="{{ '/articles/' | relative_url }}">Articles</a>
+      <a href="{{ '/videos/' | relative_url }}">Videos</a>
+      <a href="{{ '/research/' | relative_url }}">Research</a>
+      <a href="{{ '/team/' | relative_url }}" class="active">Our Team</a>
+      <a href="{{ '/contact/' | relative_url }}">Contact</a>
     </nav>
   </div>
 </header>
-
 <main>
-  <section class="et-page-hero">
-    <div class="et-container">
-      <div class="et-kicker">Contact</div>
-      <h1>Connect with Equality Times.</h1>
-      <p>For collaboration, contributor enquiries, corrections, research communication and public legal-awareness initiatives.</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <h2 class="section-title">Contact</h2>
-        <p class="section-note">For collaboration, media, corrections, and legal awareness suggestions</p>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-intro card">
-          <div class="et-section-label">Get in Touch</div>
-          <h2>Thoughtful communication matters.</h2>
-          <p>Equality Times welcomes relevant ideas, research communication, collaboration proposals and responsible corrections.</p>
-          <p class="contact-note">For article submissions, please use the dedicated contributor page.</p>
-          <a class="btn btn-primary" href="/write/">Write for Equality Times →</a>
-        </div>
-        <div class="card">
-          <h3>Email</h3>
-          <p>For collaboration requests, ideas, corrections, or public-interest communication.</p>
-          <div style="height:14px"></div>
-          <a id="contactEmailLink" class="btn btn-primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=equalitytimesindia%40gmail.com">
-            <span id="contactEmail">equalitytimesindia@gmail.com</span>
-          </a>
-        </div>
-
-        <div class="card">
-          <h3>YouTube Channel</h3>
-          <p>Watch Equality Times videos and follow the latest public legal education content.</p>
-          <div style="height:14px"></div>
-          <a id="ytLink" class="btn btn-secondary" href="https://youtube.com/@equalitytimes?si=55bJiI7Zwe0l3qLC" target="_blank" rel="noopener">
-            Open YouTube Channel
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="et-page-hero"><div class="et-container"><div class="et-kicker">Our Team</div><h1>People behind the platform.</h1><p>Equality Times is built through editorial work, research, media and collaboration.</p></div></section>
+<section class="section"><div class="container"><div class="team-grid">
+<article class="team-card team-founder"><div class="team-photo"><img src="{{ '/assets/founder.jpg' | relative_url }}" alt="Founder of Equality Times"></div><div class="team-body"><div class="et-section-label">Founder &amp; Editorial Lead</div><h2>Harshal Manoharrao Gawande</h2><p class="team-role">Law Student · Founder, Equality Times</p><p>Founder of Equality Times, working across legal education, research, editorial development and public legal awareness.</p></div></article>
+<div class="team-note"><div class="et-section-label">Contributors</div><h2>A collaborative publication.</h2><p>As Equality Times grows, contributors may participate across research, writing, photography, media, editing and other project-based roles.</p><a class="btn btn-secondary" href="{{ '/write/' | relative_url }}">Contribute to Equality Times →</a></div>
+</div></div></section>
 </main>
-
 <footer class="professional-footer">
   <div class="professional-footer-inner">
     <div class="professional-footer-main">
@@ -126,7 +88,4 @@
     </div>
   </div>
 </footer>
-
-<script src="assets/site.js"></script>
-</body>
-</html>
+</body></html>

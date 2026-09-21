@@ -140,7 +140,7 @@ layout: null
       .et-container { width: calc(100% - 28px); }
       .et-hero { min-height: 590px; }
       .et-hero-content { min-height: 590px; align-items: flex-end; }
-      .et-hero-bg { background-position: 65% center; background-image: linear-gradient(90deg, rgba(248,247,243,.98) 0%, rgba(248,247,243,.91) 55%, rgba(248,247,243,.35) 100%), url("https://raw.githubusercontent.com/equalitytimes/equalitytimes-test/main/assets/hero-final.png"); }
+      .et-hero-bg { background-position: 65% center; background-image: linear-gradient(90deg, rgba(248,247,243,.98) 0%, rgba(248,247,243,.91) 55%, rgba(248,247,243,.35) 100%), url("/assets/hero-final.png"); }
       .et-hero-copy { width: 100%; padding: 45px 0; }
       .et-hero h1 { font-size: 43px; letter-spacing: -1px; }
       .et-hero-description { font-size: 17px; }
@@ -204,7 +204,7 @@ layout: null
       .site-nav a{font-size:14px !important;padding:7px 0 11px !important;}
     }
   </style>
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/equalitytimes/equalitytimes-test/main/assets/logo-new.png">
+  <link rel="icon" type="image/png" href="/assets/logo-new.png">
 
 <style>
 /* Global fixed navigation */
@@ -225,7 +225,7 @@ body{padding-top:88px!important}
 <header class="site-header">
   <div class="site-header-inner">
     <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="Equality Times home">
-      <img src="https://raw.githubusercontent.com/equalitytimes/equalitytimes-test/main/assets/logo-new.png" alt="Equality Times">
+      <img src="/assets/logo-new.png" alt="Equality Times">
       <span class="site-brand-tagline">LEGAL EDUCATION&nbsp;&nbsp;•&nbsp;&nbsp;RESEARCH&nbsp;&nbsp;•&nbsp;&nbsp;PUBLIC AWARENESS</span>
     </a>
     <nav class="site-nav" aria-label="Main navigation">
@@ -246,7 +246,7 @@ body{padding-top:88px!important}
 <main>
   <section class="et-hero">
     <div class="et-hero-bg">
-      <img src="https://raw.githubusercontent.com/equalitytimes/equalitytimes-test/main/assets/hero-final.png" alt="Equality Times hero" loading="eager" fetchpriority="high">
+      <img src="/assets/hero-final.png" alt="Equality Times hero" loading="eager" fetchpriority="high">
     </div>
 
     <div class="et-container et-hero-content">
@@ -301,7 +301,7 @@ body{padding-top:88px!important}
           {% if featured %}
           <a href="{{ featured.url | relative_url }}" class="et-feature-card">
             <div class="et-feature-image">
-              {% if featured.cover_image %}<img src="{{ featured.cover_image | relative_url }}" alt="{{ featured.title }}">{% else %}<img src="https://raw.githubusercontent.com/equalitytimes/equalitytimes-test/main/assets/hero-final.png" alt="{{ featured.title }}">{% endif %}
+              {% if featured.cover_image %}<img src="{{ featured.cover_image | relative_url }}" alt="{{ featured.title }}">{% else %}<img src="/assets/hero-final.png" alt="{{ featured.title }}">{% endif %}
             </div>
             <div class="et-feature-content">
               <div class="et-category">{{ featured.category | default: "LEGAL EDUCATION" }}</div>
@@ -313,7 +313,7 @@ body{padding-top:88px!important}
           </a>
           {% else %}
           <div class="et-feature-card">
-            <div class="et-feature-image"><img src="https://raw.githubusercontent.com/equalitytimes/equalitytimes-test/main/assets/hero-final.png" alt="Equality Times"></div>
+            <div class="et-feature-image"><img src="/assets/hero-final.png" alt="Equality Times"></div>
             <div class="et-feature-content"><div class="et-category">LEGAL EDUCATION</div><h3>Legal Education Beyond the Classroom</h3><p>Explore constitutional law, equality, human rights and legal awareness.</p></div>
           </div>
           {% endif %}
@@ -327,7 +327,7 @@ body{padding-top:88px!important}
               {% if latest_count < 4 %}
               <a href="{{ post.url | relative_url }}" class="et-latest-item">
                 <div class="et-latest-image">
-                  {% if post.cover_image %}<img src="{{ post.cover_image }}" alt="{{ post.title }}">{% else %}<img src="https://raw.githubusercontent.com/equalitytimes/equalitytimes-test/main/assets/hero-final.png" alt="{{ post.title }}">{% endif %}
+                  {% if post.cover_image %}<img src="{{ post.cover_image }}" alt="{{ post.title }}">{% else %}<img src="/assets/hero-final.png" alt="{{ post.title }}">{% endif %}
                 </div>
                 <div><div class="et-category">{{ post.category | default: "LEGAL" }}</div><h3>{{ post.title }}</h3><div class="et-latest-meta">{{ post.date | date: "%d %b %Y" }}</div></div>
               </a>
@@ -347,9 +347,9 @@ body{padding-top:88px!important}
         <a href="{{ '/videos/' | relative_url }}" class="et-view-all">View all videos →</a>
       </div>
       <div id="videosFeatured" class="et-video-grid">
-        <div class="et-video-card"><a href="{{ '/videos/' | relative_url }}"><div class="et-video-thumb"><img src="https://raw.githubusercontent.com/equalitytimes/equalitytimes-test/main/assets/hero-final.png" alt="Equality Times videos"><div class="et-video-play">▶</div></div><div class="et-video-title">Legal Awareness for a Stronger Society</div></a></div>
-        <div class="et-video-card"><a href="{{ '/videos/' | relative_url }}"><div class="et-video-thumb"><img src="https://raw.githubusercontent.com/equalitytimes/equalitytimes-test/main/assets/hero-final.png" alt="Equality Times videos"><div class="et-video-play">▶</div></div><div class="et-video-title">Caste, Equality and the Law</div></a></div>
-        <div class="et-video-card"><a href="{{ '/videos/' | relative_url }}"><div class="et-video-thumb"><img src="https://raw.githubusercontent.com/equalitytimes/equalitytimes-test/main/assets/hero-final.png" alt="Equality Times videos"><div class="et-video-play">▶</div></div><div class="et-video-title">Constitution Basics</div></a></div>
+        <div class="et-video-card"><a href="{{ '/videos/' | relative_url }}"><div class="et-video-thumb"><img src="/assets/hero-final.png" alt="Equality Times videos"><div class="et-video-play">▶</div></div><div class="et-video-title">Legal Awareness for a Stronger Society</div></a></div>
+        <div class="et-video-card"><a href="{{ '/videos/' | relative_url }}"><div class="et-video-thumb"><img src="/assets/hero-final.png" alt="Equality Times videos"><div class="et-video-play">▶</div></div><div class="et-video-title">Caste, Equality and the Law</div></a></div>
+        <div class="et-video-card"><a href="{{ '/videos/' | relative_url }}"><div class="et-video-thumb"><img src="/assets/hero-final.png" alt="Equality Times videos"><div class="et-video-play">▶</div></div><div class="et-video-title">Constitution Basics</div></a></div>
       </div>
     </div>
   </section>
@@ -361,7 +361,7 @@ body{padding-top:88px!important}
         <a href="{{ '/research/' | relative_url }}" class="et-view-all">Explore all research →</a>
       </div>
       <div class="et-research-card">
-        <div class="et-research-image"><img src="https://raw.githubusercontent.com/equalitytimes/equalitytimes-test/main/assets/hero-final.png" alt="Equality Times research"></div>
+        <div class="et-research-image"><img src="/assets/hero-final.png" alt="Equality Times research"></div>
         <div class="et-research-content">
           <div class="et-category">RESEARCH PAPER</div>
           <h3>Artificial Intelligence and Right to Equality</h3>
@@ -377,7 +377,7 @@ body{padding-top:88px!important}
   <div class="professional-footer-inner">
     <div class="professional-footer-main">
       <div class="professional-footer-brand">
-        <img src="https://raw.githubusercontent.com/equalitytimes/equalitytimes-test/main/assets/logo-new.png" alt="Equality Times">
+        <img src="/assets/logo-new.png" alt="Equality Times">
         <div class="professional-footer-tagline">LEGAL EDUCATION &nbsp;•&nbsp; RESEARCH &nbsp;•&nbsp; PUBLIC AWARENESS</div>
         <p>A legal education, research and public awareness platform exploring law, equality, human rights, technology and access to justice.</p>
       </div>

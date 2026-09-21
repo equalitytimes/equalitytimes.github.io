@@ -1,0 +1,74 @@
+name: Migrate tested website assets
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/migrate-assets.yml
+
+permissions:
+  contents: write
+
+jobs:
+  migrate-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout production repository
+        uses: actions/checkout@v4
+
+      - name: Download assets from tested repository
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://raw.githubusercontent.com/equalitytimes/equalitytimes-test/main"
+          files=(
+            "assets/logo-new.png"
+            "assets/hero-final.png"
+            "media/article-images/31c48b75-87ef-4015-b5d6-0edadc527674-800x470.webp"
+            "media/article-images/chatgpt-image-sep-18-2026-024918-pm.png"
+            "media/article-images/createacaptivatingandcreativecoverimageforanarticletitledtopfreeaitoolstheartworkshouldfeatureafemalefacewiththebrainvisibd56eabd6f9-1.png"
+            "media/article-images/oip-1.webp"
+            "media/article-images/oip-2.webp"
+            "media/article-images/picsart26-03-0416-49-24-041jpg.jpeg"
+            "media/article-images/poor-25440611280-1.jpg"
+            "media/author-images/whatsapp-image-2026-09-21-at-63136-pm-1.jpeg"
+            "media/author-images/whatsapp-image-2026-09-21-at-63136-pm.jpeg"
+          )
+          for file in "${files[@]}"; do
+            mkdir -p "$(dirname "$file")"
+            curl -fL --retry 3 "$base/$file" -o "$file"
+          done
+
+      - name: Switch references to local assets and finalize
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          root = Path(".")
+          replacements = {
+            "https://raw.githubusercontent.com/equalitytimes/equalitytimes-test/main/assets/logo-new.png": "/assets/logo-new.png",
+            "https://raw.githubusercontent.com/equalitytimes/equalitytimes-test/main/assets/hero-final.png": "/assets/hero-final.png",
+          }
+          for p in root.rglob("*"):
+            if not p.is_file() or ".git" in p.parts:
+              continue
+            try:
+              s = p.read_text()
+            except UnicodeDecodeError:
+              continue
+            for remote, local in replacements.items():
+              s = s.replace(remote, local)
+            s = s.replace("https://raw.githubusercontent.com/equalitytimes/equalitytimes-test/main/media/", "/media/")
+            p.write_text(s)
+          PY
+          rm -f .github/workflows/migrate-assets.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No asset changes to commit."
+            exit 0
+          fi
+          git commit -m "Finalize production asset migration"
+          git push

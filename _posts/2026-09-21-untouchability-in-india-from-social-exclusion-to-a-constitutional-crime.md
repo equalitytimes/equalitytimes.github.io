@@ -12,7 +12,7 @@ tags:
   - Caste
   - Equality
 ---
-*Article 17 abolished untouchability more than seven decades ago. Yet the history of caste exclusion—from Mahad and Vaikom to contemporary discrimination—shows the distance that can exist between constitutional rights and social reality.*
+*Article 17 abolished untouchability more than seven decades ago. Yet the history of caste exclusion, from Mahad and Vaikom to contemporary discrimination, shows the distance that can exist between constitutional rights and social reality.*
 
 Untouchability is one of the most powerful examples of the Indian Constitution's attempt to transform society through law. For generations, people placed at the bottom of the caste hierarchy were subjected to restrictions because of their birth. Access to water, roads, temples, schools and other public spaces could depend on caste. In some places, social exclusion extended to occupations, residence, clothing and ordinary interaction with other members of society.
 

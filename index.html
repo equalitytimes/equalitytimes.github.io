@@ -1,235 +1,397 @@
+---
+layout: null
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Equality Times | Public Legal Education Platform</title>
-  <meta name="description" content="Equality Times is a public legal education platform focused on equality, human rights, constitutional law, and research-based awareness."/>
-  <link rel="stylesheet" href="assets/style.css"/>
+
+  <meta name="description"
+        content="Equality Times is a public legal education platform focused on law, equality, human rights, constitutional values and research.">
+
+  <link rel="stylesheet" href="/assets/style.css">
+
+  <style>
+    :root {
+      --yellow: #f4c400;
+      --yellow-dark: #d9ad00;
+      --ink: #111923;
+      --muted: #5e6875;
+      --cream: #f8f7f3;
+      --white: #ffffff;
+      --line: #dddcd6;
+      --dark: #080d11;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--cream); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+    a { color: inherit; text-decoration: none; }
+
+    .et-container { width: min(var(--max), calc(100% - 80px)); margin: 0 auto; }
+
+    .et-header { position: sticky !important; top: 0 !important; z-index: 1000 !important; box-shadow:0 4px 18px rgba(0,0,0,.08)!important; background: #090e12; color: #fff; border-bottom: 1px solid rgba(255,255,255,.08); }
+    .et-header-inner { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+    .et-brand { display: flex; align-items: center; gap: 14px; }
+    .et-brand-tagline { display: block; margin-top: 7px; font-size: 9px; line-height: 1.25; letter-spacing: .08em; color: #aeb5bd; white-space: nowrap; font-weight: 500; }
+    .et-brand img { width: 165px; max-height: 68px; object-fit: contain; object-position: left center; }
+    .et-brand-copy { display: none; }
+    .et-nav { display: flex; align-items: center; gap: 32px; }
+    .et-nav a { color: #fff; font-size: 14px; font-weight: 500; position: relative; padding: 31px 0 27px; }
+    .et-nav a:hover, .et-nav a.active { color: #fff; }
+    .et-search { font-size: 24px; line-height: 1; margin-left: 5px; }
+
+    .et-hero { min-height: 475px; position: relative; overflow: hidden; background: #eef0ee; }
+    .et-hero-bg { position: absolute; inset: 0; z-index: 0; overflow: hidden; background: #eef0ee; }
+    .et-hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+    .et-hero-bg::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(248,247,243,.96) 0%, rgba(248,247,243,.86) 28%, rgba(248,247,243,.42) 48%, rgba(248,247,243,.05) 68%); pointer-events: none; }
+    .et-hero-content { position: relative; z-index: 10; min-height: 475px; display: flex; align-items: center; }
+    .et-hero-copy { position: relative; z-index: 11; width: 52%; padding: 65px 0; }
+    .et-eyebrow { display: flex; align-items: center; gap: 12px; color: #293543; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; }
+    .et-eyebrow::after { content: ""; width: 55px; height: 2px; background: var(--yellow); }
+    .et-hero h1 { margin: 0 0 22px; max-width: 650px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(46px, 5vw, 70px); line-height: .98; letter-spacing: -2px; font-weight: 700; }
+    .et-hero-description { max-width: 510px; font-family: Georgia, "Times New Roman", serif; font-size: 20px; line-height: 1.45; color: #27323e; margin-bottom: 30px; }
+    .et-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+    .et-btn { display: inline-flex; align-items: center; gap: 12px; padding: 14px 22px; border: 1px solid #18222d; font-size: 14px; font-weight: 700; transition: .2s ease; }
+    .et-btn-primary { background: var(--yellow); border-color: var(--yellow); color: #111; }
+    .et-btn-primary:hover { background: #ffd51a; }
+    .et-btn-secondary { background: rgba(255,255,255,.78); }
+    .et-btn-secondary:hover { background: #fff; }
+    .et-play { width: 22px; height: 22px; border-radius: 50%; background: #111923; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 9px; }
+
+    .et-section { padding: 55px 0; background: var(--cream); }
+    .et-section-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 27px; }
+    .et-heading-wrap { display: flex; align-items: center; gap: 14px; }
+    .et-heading-line { width: 32px; height: 3px; background: var(--yellow); flex: none; }
+    .et-section h2 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 34px; line-height: 1; }
+    .et-section-sub { color: var(--muted); font-size: 14px; margin: 7px 0 0 46px; }
+    .et-view-all { font-size: 13px; color: #293c52; white-space: nowrap; }
+    .et-view-all span { margin-left: 7px; font-size: 18px; }
+
+    .et-focus-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .et-focus-card { padding: 27px 28px 28px 8px; border-right: 1px solid #ddd5bd; }
+    .et-focus-card:last-child { border-right: 0; }
+    .et-focus-icon { font-size: 32px; margin-bottom: 17px; }
+    .et-focus-card h3 { margin: 0 0 10px; font-family: Georgia, "Times New Roman", serif; font-size: 21px; line-height: 1.15; }
+    .et-focus-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+
+    .et-feature-grid { display: grid; grid-template-columns: 1.65fr 1fr; gap: 38px; }
+    .et-feature-card { display: grid; grid-template-columns: 1fr 1fr; background: #fff; border: 1px solid #e0dfda; }
+    .et-feature-image { min-height: 320px; background: linear-gradient(135deg, #111923, #5e6875); overflow: hidden; }
+    .et-feature-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .et-feature-content { padding: 34px; display: flex; flex-direction: column; justify-content: center; }
+    .et-category { color: #657080; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px; }
+    .et-feature-content h3 { margin: 0 0 15px; font-family: Georgia, "Times New Roman", serif; font-size: 29px; line-height: 1.1; }
+    .et-feature-content p { color: var(--muted); line-height: 1.55; font-size: 14px; margin: 0 0 20px; }
+    .et-meta { color: #687384; font-size: 12px; margin-bottom: 25px; }
+    .et-read { font-size: 13px; font-weight: 700; }
+    .et-latest-list { display: flex; flex-direction: column; }
+    .et-latest-item { display: grid; grid-template-columns: 115px 1fr; gap: 16px; padding: 0 0 18px; margin-bottom: 18px; border-bottom: 1px solid var(--line); }
+    .et-latest-item:last-child { margin-bottom: 0; }
+    .et-latest-image { height: 78px; background: #202933; overflow: hidden; }
+    .et-latest-image img { width: 100%; height: 100%; object-fit: cover; }
+    .et-latest-item h3 { font-family: Georgia, "Times New Roman", serif; font-size: 17px; line-height: 1.15; margin: 4px 0 8px; }
+    .et-latest-meta { font-size: 11px; color: #687384; }
+
+    .et-video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .et-video-card { background: #fff; }
+    .et-video-thumb { position: relative; height: 190px; overflow: hidden; background: #131a22; }
+    .et-video-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .et-video-play { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 48px; height: 48px; border: 2px solid #fff; border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,.45); }
+    .et-video-title { padding: 14px 4px 5px; font-family: Georgia, "Times New Roman", serif; font-size: 17px; line-height: 1.25; }
+
+    .et-research-card { display: grid; grid-template-columns: 250px 1fr; background: #fff; border: 1px solid #deddd8; }
+    .et-research-image { min-height: 180px; background: linear-gradient(135deg, #111923, #777); overflow: hidden; }
+    .et-research-image img { width: 100%; height: 100%; object-fit: cover; }
+    .et-research-content { padding: 30px; }
+    .et-research-content h3 { margin: 0 0 12px; font-family: Georgia, "Times New Roman", serif; font-size: 27px; }
+    .et-research-content p { color: var(--muted); max-width: 700px; line-height: 1.55; margin-bottom: 20px; }
+
+    .et-footer { background: #090e12; color: #fff; padding: 45px 0 25px; }
+    .et-footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 35px; border-bottom: 1px solid rgba(255,255,255,.14); }
+    .et-footer-brand { font-family: Georgia, "Times New Roman", serif; font-size: 25px; }
+    .et-footer-brand img { width: 120px; height: auto; display: block; margin-bottom: 22px; }
+    .et-footer-brand strong { color: var(--yellow); }
+    .et-footer small { display: block; color: #b5bcc4; margin-top: 10px; line-height: 1.6; }
+    .et-footer h4 { margin: 0 0 15px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #fff; }
+    .et-footer a { display: block; color: #c4cad0; font-size: 13px; margin-bottom: 10px; }
+    .et-footer a:hover { color: var(--yellow); }
+    .et-copyright { display: flex; justify-content: space-between; gap: 20px; padding-top: 20px; color: #8e969f; font-size: 11px; }
+
+    @media (max-width: 900px) {
+      .et-container { width: min(100% - 40px, var(--max)); }
+      .et-header-inner { flex-direction: column; padding: 18px 0; align-items: flex-start; }
+      .et-nav { width: 100%; overflow-x: auto; gap: 22px; }
+      .et-nav a { padding: 8px 0 12px; white-space: nowrap; }
+      .et-hero-copy { width: 75%; }
+      .et-focus-grid { grid-template-columns: repeat(2, 1fr); }
+      .et-focus-card:nth-child(2) { border-right: 0; }
+      .et-focus-card:nth-child(3), .et-focus-card:nth-child(4) { border-top: 1px solid var(--line); }
+      .et-feature-grid { grid-template-columns: 1fr; }
+      .et-video-grid { grid-template-columns: 1fr; }
+      .et-footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .et-container { width: calc(100% - 28px); }
+      .et-hero { min-height: 590px; }
+      .et-hero-content { min-height: 590px; align-items: flex-end; }
+      .et-hero-bg { background-position: 65% center; background-image: linear-gradient(90deg, rgba(248,247,243,.98) 0%, rgba(248,247,243,.91) 55%, rgba(248,247,243,.35) 100%), url("/assets/hero-final.png"); }
+      .et-hero-copy { width: 100%; padding: 45px 0; }
+      .et-hero h1 { font-size: 43px; letter-spacing: -1px; }
+      .et-hero-description { font-size: 17px; }
+      .et-section { padding: 40px 0; }
+      .et-section h2 { font-size: 29px; }
+      .et-section-head { align-items: flex-start; }
+      .et-focus-grid { grid-template-columns: 1fr; }
+      .et-focus-card { border-right: 0; border-bottom: 1px solid var(--line); }
+      .et-focus-card:last-child { border-bottom: 0; }
+      .et-feature-card { grid-template-columns: 1fr; }
+      .et-feature-image { min-height: 230px; }
+      .et-research-card { grid-template-columns: 1fr; }
+      .et-research-image { min-height: 210px; }
+      .et-footer-grid { grid-template-columns: 1fr; }
+      .et-copyright { flex-direction: column; }
+    }
+
+    @media (max-width: 600px) {
+      .et-container { padding-left: 20px; padding-right: 20px; }
+      .et-header-inner { padding: 16px 20px; }
+      .et-brand img { width: 140px; max-height: 58px; }
+      .et-nav { gap: 14px; flex-wrap: wrap; }
+      .et-nav a { font-size: 14px; padding: 6px 0; }
+      .et-hero { min-height: 520px; }
+      .et-hero-content { min-height: 520px; }
+      .et-hero-copy { width: 100%; padding: 55px 0; }
+      .et-hero-copy h1 { font-size: 42px; line-height: 1.08; }
+      .et-hero-copy p { font-size: 17px; line-height: 1.7; }
+      .et-hero-bg::after { background: linear-gradient(180deg, rgba(248,247,243,.95) 0%, rgba(248,247,243,.88) 55%, rgba(248,247,243,.55) 100%); }
+      .et-grid, .et-cards, .et-two-col { grid-template-columns: 1fr; }
+      .et-section { padding: 55px 20px; }
+      .et-section h2 { font-size: 34px; line-height: 1.15; }
+      .et-card { padding: 25px; }
+      .et-card h3 { font-size: 21px; }
+      .et-card p { font-size: 16px; line-height: 1.7; }
+      .et-footer-grid { grid-template-columns: 1fr; gap: 40px; }
+      .et-footer { padding-left: 20px; padding-right: 20px; }
+      .et-footer-bottom { flex-direction: column; gap: 10px; }
+    }
+
+    .site-header{background:#080d11 !important;color:#fff !important;width:100% !important;position:fixed!important;top:0!important;z-index:1000!important;}
+    .site-header-inner{width:min(1180px,calc(100% - 56px)) !important;min-height:88px !important;margin:0 auto !important;padding:0 !important;display:flex !important;align-items:center !important;justify-content:space-between !important;gap:30px !important;}
+    .site-brand{display:flex !important;flex-direction:column !important;align-items:flex-start !important;justify-content:center !important;flex:0 0 auto !important;gap:4px !important;text-decoration:none !important;}
+    .site-brand img{display:block !important;width:128px !important;height:auto !important;max-width:128px !important;max-height:none !important;object-fit:contain !important;}
+    .site-brand-tagline{display:block !important;margin:0 !important;color:#d7dbe0 !important;font-family:Arial,Helvetica,sans-serif !important;font-size:8.5px !important;line-height:1 !important;font-weight:600 !important;letter-spacing:1.05px !important;white-space:nowrap !important;text-transform:uppercase !important;}
+    .site-nav{display:flex !important;align-items:center !important;justify-content:flex-end !important;gap:28px !important;flex:0 0 auto !important;}
+    .site-nav a{display:block !important;position:relative !important;box-sizing:border-box !important;color:#fff !important;text-decoration:none !important;font-family:Arial,Helvetica,sans-serif !important;font-size:15px !important;line-height:1.2 !important;font-weight:600 !important;padding:31px 0 27px !important;margin:0 !important;border:0 !important;border-bottom:3px solid transparent !important;white-space:nowrap !important;}
+    .site-nav a:hover,.site-nav a.active{color:#fff !important;border-bottom-color:#f4c400 !important;}
+    .site-nav a::before,.site-nav a::after{content:none !important;display:none !important;}
+    @media(max-width:900px){
+      .site-header-inner{width:calc(100% - 44px) !important;min-height:auto !important;padding:18px 0 !important;flex-direction:column !important;align-items:flex-start !important;}
+      .site-brand-tagline{font-size:8px !important;}
+      .site-nav{width:100% !important;justify-content:flex-start !important;gap:20px !important;overflow-x:auto !important;flex-wrap:nowrap !important;}
+      .site-nav a{font-size:15px !important;padding:8px 0 12px !important;}
+    }
+    @media(max-width:600px){
+      .site-header-inner{width:calc(100% - 32px) !important;padding:16px 0 !important;}
+      .site-brand img{width:128px !important;}
+      .site-brand-tagline{font-size:7.5px !important;letter-spacing:.8px !important;}
+      .site-nav{gap:16px !important;}
+      .site-nav a{font-size:14px !important;padding:7px 0 11px !important;}
+    }
+  </style>
+  <link rel="icon" type="image/png" href="/assets/logo-new.png">
+
+<style>
+/* Global fixed navigation */
+.site-header,.et-header{position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;z-index:1000!important;box-shadow:0 4px 18px rgba(0,0,0,.10)!important}
+body{padding-top:88px!important}
+@media(max-width:900px){body{padding-top:0!important}}
+@media(max-width:600px){body{padding-top:0!important}}
+
+/* Mobile header flow fix: keep the full header in document flow. */
+@media (max-width: 900px){
+  .site-header{position:sticky!important;top:0!important;left:auto!important;right:auto!important}
+}
+</style>
 </head>
+
 <body>
 
-<header class="topbar">
-  <div class="container topbar-inner">
-    <a class="brand" href="/">
-      <div class="brand-logo"><img src="assets/logo.png" alt="Equality Times logo"></div>
-      <div>
-        <div class="brand-title">Equality Times</div>
-        <div class="brand-sub">Constitution • Equality • Human Rights • Legal Awareness</div>
-      </div>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="Equality Times home">
+      <img src="/assets/logo-new.png" alt="Equality Times">
+      <span class="site-brand-tagline">LEGAL EDUCATION&nbsp;&nbsp;•&nbsp;&nbsp;RESEARCH&nbsp;&nbsp;•&nbsp;&nbsp;PUBLIC AWARENESS</span>
     </a>
-
-    <nav class="nav">
-      <a class="active" href="/">Home</a>
-      <a href="about.html">About</a>
-      <a href="videos.html">Videos</a>
-      <a href="news.html">News & Stories</a>
-      <a href="research.html">Research</a>
-      <a href="contact.html">Contact</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="{{ '/' | relative_url }}" class="active">Home</a>
+      <a href="{{ '/about/' | relative_url }}">About</a>
+      <a href="{{ '/articles/' | relative_url }}">Articles</a>
+      <a href="{{ '/videos/' | relative_url }}">Videos</a>
+      <a href="{{ '/research/' | relative_url }}">Research</a>
+      <a href="{{ '/team/' | relative_url }}">Our Team</a>
+      <a href="{{ '/contact/' | relative_url }}">Contact</a>
     </nav>
+
+    </div>
+    </div>
   </div>
 </header>
 
 <main>
+  <section class="et-hero">
+    <div class="et-hero-bg">
+      <img src="/assets/hero-final.png" alt="Equality Times hero" loading="eager" fetchpriority="high">
+    </div>
 
-  <section class="hero">
-    <div class="container">
-      <div class="hero-banner">
-        <img src="assets/hero-poster.gif" alt="Equality Times hero banner"
-             onerror="this.src='assets/hero-poster.jpg'">
-        <div class="hero-banner-overlay"></div>
-      </div>
-
-      <div class="hero-panel">
-        <div class="hero-left">
-          <div class="hero-badge"><span class="hero-dot"></span> Public legal education platform</div>
-          <h1>Equality. Justice. Human Dignity.</h1>
-          <p>
-            Equality Times is a public legal education platform focused on constitutional law, equality,
-            human rights, and legal awareness. We publish research-based explainers, videos, legal news,
-            and analysis to make law accessible to students and citizens.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="videos.html">Watch Videos</a>
-            <a class="btn btn-secondary" href="research.html">Read Research</a>
-          </div>
+    <div class="et-container et-hero-content">
+      <div class="et-hero-copy">
+        <div class="et-eyebrow">
+          Legal Education
+          <span>•</span>
+          Research
+          <span>•</span>
+          Public Awareness
         </div>
 
-        <div class="hero-right">
-          <div class="hero-mini-card">
-            <h3>Public legal education</h3>
-            <p>Clear explanations of constitutional rights, institutions, and legal questions.</p>
-          </div>
-          <div class="hero-mini-card">
-            <h3>Rights & accountability</h3>
-            <p>Focused on social justice, structural inequality, and public-interest legal awareness.</p>
-          </div>
-          <div class="hero-mini-card">
-            <h3>Research-led content</h3>
-            <p>Videos, legal news, and papers rooted in clarity, evidence, and constitutional values.</p>
-          </div>
+        <h1>Making Law Understandable. Making Legal Awareness Accessible.</h1>
+
+        <p class="et-hero-description">
+          Legal education and public awareness for a more equal and informed society.
+        </p>
+
+        <div class="et-actions">
+          <a href="{{ '/articles/' | relative_url }}" class="et-btn et-btn-primary">Explore Articles →</a>
+          <a href="{{ '/videos/' | relative_url }}" class="et-btn et-btn-secondary"><span class="et-play">▶</span>Watch Videos</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <h2 class="section-title">What we stand for</h2>
-        <p class="section-note">The values behind Equality Times</p>
+  <section class="et-section">
+    <div class="et-container">
+      <div class="et-section-head">
+        <div>
+          <div class="et-heading-wrap"><span class="et-heading-line"></span><h2>Our Focus</h2></div>
+          <p class="et-section-sub">Key areas of legal education at Equality Times.</p>
+        </div>
+        <a href="{{ '/articles/' | relative_url }}" class="et-view-all">Explore all topics <span>→</span></a>
       </div>
-
-      <div class="grid-3">
-        <div class="card">
-          <h3>Equality</h3>
-          <p>We highlight discrimination, exclusion, and legal inequality through a constitutional lens.</p>
-          <div class="tag-row"><span class="tag">Article 14</span><span class="tag">Justice</span></div>
-        </div>
-        <div class="card">
-          <h3>Human Rights</h3>
-          <p>We foreground dignity, liberty, due process, and the rights of marginalized communities.</p>
-          <div class="tag-row"><span class="tag">Dignity</span><span class="tag">Rights</span></div>
-        </div>
-        <div class="card">
-          <h3>Legal Awareness</h3>
-          <p>We make complex legal issues understandable through videos, explainers, and research.</p>
-          <div class="tag-row"><span class="tag">Awareness</span><span class="tag">Education</span></div>
-        </div>
+      <div class="et-focus-grid">
+        <div class="et-focus-card"><div class="et-focus-icon">⚖</div><h3>Constitutional Law</h3><p>Rights, institutions and constitutional principles.</p></div>
+        <div class="et-focus-card"><div class="et-focus-icon">◉</div><h3>Equality & Anti-Discrimination</h3><p>Caste, social justice and legal remedies.</p></div>
+        <div class="et-focus-card"><div class="et-focus-icon">⚖</div><h3>Human Rights</h3><p>Dignity, liberty and rights for all.</p></div>
+        <div class="et-focus-card"><div class="et-focus-icon">▣</div><h3>Technology & Cyber Law</h3><p>AI, technology, cyber law, privacy and emerging legal issues.</p></div>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <h2 class="section-title">Core focus areas</h2>
-        <p class="section-note">The subjects Equality Times consistently covers</p>
-      </div>
-
-      <div class="grid-3">
-        <div class="card"><h3>Constitutional Law</h3><p>Fundamental rights, constitutional morality, institutions, and state power.</p></div>
-        <div class="card"><h3>Equality & Anti-Discrimination</h3><p>Caste, structural inequality, exclusion, and legal remedies.</p></div>
-        <div class="card"><h3>Human Rights & Social Justice</h3><p>Law, dignity, democratic rights, and accountability.</p></div>
-        <div class="card"><h3>SC/ST Act Awareness</h3><p>Rights, legal protection, and public understanding of the Act.</p></div>
-        <div class="card"><h3>Cyber Law & Privacy</h3><p>Technology, digital harms, AI, and emerging legal questions.</p></div>
-        <div class="card"><h3>Legal News Explained</h3><p>Important developments presented with context and clarity.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section et-quote-section">
-    <div class="container">
-      <div class="et-quote-grid">
-        <div class="et-quote-media">
-          <img src="assets/ambedkar.gif" alt="Equality Times visual" onerror="this.style.display='none'">
+  <section class="et-section">
+    <div class="et-container">
+      <div class="et-feature-grid">
+        <div>
+          <div class="et-section-head"><div class="et-heading-wrap"><span class="et-heading-line"></span><h2>Featured Article</h2></div></div>
+          {% assign sorted_posts = site.posts | sort: "date" | reverse %}
+          {% assign featured = sorted_posts.first %}
+          {% if featured %}
+          <a href="{{ featured.url | relative_url }}" class="et-feature-card">
+            <div class="et-feature-image">
+              {% if featured.cover_image %}<img src="{{ featured.cover_image | relative_url }}" alt="{{ featured.title }}">{% else %}<img src="/assets/hero-final.png" alt="{{ featured.title }}">{% endif %}
+            </div>
+            <div class="et-feature-content">
+              <div class="et-category">{{ featured.category | default: "LEGAL EDUCATION" }}</div>
+              <h3>{{ featured.title }}</h3>
+              <p>{{ featured.description | default: featured.excerpt | strip_html | truncate: 180 }}</p>
+              <div class="et-meta">{% if featured.author %}{{ featured.author }}{% else %}Equality Times{% endif %}&nbsp; | &nbsp;{{ featured.date | date: "%d %b %Y" }}</div>
+              <div class="et-read">Read Article →</div>
+            </div>
+          </a>
+          {% else %}
+          <div class="et-feature-card">
+            <div class="et-feature-image"><img src="/assets/hero-final.png" alt="Equality Times"></div>
+            <div class="et-feature-content"><div class="et-category">LEGAL EDUCATION</div><h3>Legal Education Beyond the Classroom</h3><p>Explore constitutional law, equality, human rights and legal awareness.</p></div>
+          </div>
+          {% endif %}
         </div>
 
-        <div class="et-quote-card">
-          <div class="et-quote-label">Dr. B. R. Ambedkar</div>
-          <div class="et-quote-text">“Educate, Agitate, Organise”</div>
-          <div class="et-quote-sub">
-            A core idea behind Equality Times — legal awareness, civic courage, and collective action for dignity and equality.
+        <div>
+          <div class="et-section-head"><div class="et-heading-wrap"><span class="et-heading-line"></span><h2>Latest Articles</h2></div><a href="{{ '/articles/' | relative_url }}" class="et-view-all">View all →</a></div>
+          <div class="et-latest-list">
+            {% assign latest_count = 0 %}
+            {% for post in sorted_posts limit:4 %}
+              {% if latest_count < 4 %}
+              <a href="{{ post.url | relative_url }}" class="et-latest-item">
+                <div class="et-latest-image">
+                  {% if post.cover_image %}<img src="{{ post.cover_image }}" alt="{{ post.title }}">{% else %}<img src="/assets/hero-final.png" alt="{{ post.title }}">{% endif %}
+                </div>
+                <div><div class="et-category">{{ post.category | default: "LEGAL" }}</div><h3>{{ post.title }}</h3><div class="et-latest-meta">{{ post.date | date: "%d %b %Y" }}</div></div>
+              </a>
+              {% assign latest_count = latest_count | plus: 1 %}
+              {% endif %}
+            {% endfor %}
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <h2 class="section-title">Featured videos</h2>
-        <p class="section-note">Click any thumbnail to open YouTube</p>
+  <section class="et-section">
+    <div class="et-container">
+      <div class="et-section-head">
+        <div><div class="et-heading-wrap"><span class="et-heading-line"></span><h2>Latest Videos</h2></div></div>
+        <a href="{{ '/videos/' | relative_url }}" class="et-view-all">View all videos →</a>
       </div>
-      <div id="videosFeatured" class="video-grid"></div>
+      <div id="videosFeatured" class="et-video-grid">
+        <div class="et-video-card"><a href="{{ '/videos/' | relative_url }}"><div class="et-video-thumb"><img src="/assets/hero-final.png" alt="Equality Times videos"><div class="et-video-play">▶</div></div><div class="et-video-title">Legal Awareness for a Stronger Society</div></a></div>
+        <div class="et-video-card"><a href="{{ '/videos/' | relative_url }}"><div class="et-video-thumb"><img src="/assets/hero-final.png" alt="Equality Times videos"><div class="et-video-play">▶</div></div><div class="et-video-title">Caste, Equality and the Law</div></a></div>
+        <div class="et-video-card"><a href="{{ '/videos/' | relative_url }}"><div class="et-video-thumb"><img src="/assets/hero-final.png" alt="Equality Times videos"><div class="et-video-play">▶</div></div><div class="et-video-title">Constitution Basics</div></a></div>
+      </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <h2 class="section-title">News & Stories</h2>
-        <p class="section-note">Stories and developments that matter</p>
+  <section class="et-section">
+    <div class="et-container">
+      <div class="et-section-head">
+        <div><div class="et-heading-wrap"><span class="et-heading-line"></span><h2>Research Spotlight</h2></div></div>
+        <a href="{{ '/research/' | relative_url }}" class="et-view-all">Explore all research →</a>
       </div>
-      <div id="newsFeatured" class="news-list"></div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container grid-2">
-      <div>
-        <div class="section-head">
-          <h2 class="section-title">Research spotlight</h2>
-          <p class="section-note">Featured paper</p>
+      <div class="et-research-card">
+        <div class="et-research-image"><img src="/assets/hero-final.png" alt="Equality Times research"></div>
+        <div class="et-research-content">
+          <div class="et-category">RESEARCH PAPER</div>
+          <h3>Artificial Intelligence and Right to Equality</h3>
+          <p>Legal research examining artificial intelligence through the lens of equality, fairness and constitutional rights.</p>
+          <a href="{{ '/research/' | relative_url }}" class="et-btn et-btn-primary">Explore Research →</a>
         </div>
-        <div id="researchFeatured" class="paper-list"></div>
-      </div>
-
-      <div>
-        <div class="section-head">
-          <h2 class="section-title">Founder</h2>
-          <p class="section-note">The person behind Equality Times</p>
-        </div>
-        <div id="founderCompact"></div>
       </div>
     </div>
   </section>
-
-  <!-- Social links in empty space (no extra section/padding) -->
-  <div class="container social-row-home">
-    <div class="social-row" aria-label="Social links">
-      <a class="social-btn" href="https://youtube.com/@equalitytimes?si=55bJiI7Zwe0l3qLC" target="_blank" rel="noopener" aria-label="YouTube">
-        <span class="social-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="20" height="20">
-            <path d="M23.5 6.2s-.2-1.7-.9-2.4c-.9-.9-1.9-.9-2.4-1C16.9 2.5 12 2.5 12 2.5h0s-4.9 0-8.2.3c-.5.1-1.5.1-2.4 1C.7 4.5.5 6.2.5 6.2S0 8.1 0 10v1.9c0 1.9.5 3.8.5 3.8s.2 1.7.9 2.4c.9.9 2.1.9 2.6 1 1.9.2 8 .3 8 .3s4.9 0 8.2-.3c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.4.9-2.4S24 13.8 24 11.9V10c0-1.9-.5-3.8-.5-3.8zM9.6 14.8V7.9l6.5 3.5-6.5 3.4z"/>
-          </svg>
-        </span>
-        <span class="social-text">YouTube</span>
-      </a>
-
-      <a class="social-btn" href="mailto:equalitytimesindia@gmail.com" aria-label="Email">
-        <span class="social-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="20" height="20">
-            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
-          </svg>
-        </span>
-        <span class="social-text">Email</span>
-      </a>
-
-      <!-- Disabled until real links are added -->
-      <a class="social-btn is-disabled" href="javascript:void(0)" aria-label="Instagram (coming soon)">
-        <span class="social-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="20" height="20">
-            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3z"/>
-            <path d="M12 8.5A3.5 3.5 0 1 0 15.5 12 3.5 3.5 0 0 0 12 8.5z"/>
-            <path d="M18 6.8a1.2 1.2 0 1 1-1.2 1.2A1.2 1.2 0 0 1 18 6.8z"/>
-          </svg>
-        </span>
-        <span class="social-text">Instagram</span>
-      </a>
-
-      <a class="social-btn is-disabled" href="javascript:void(0)" aria-label="LinkedIn (coming soon)">
-        <span class="social-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="20" height="20">
-            <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0.5 8.5H4.5V23H0.5V8.5zM8 8.5h3.8v2h.1c.5-1 1.8-2.1 3.8-2.1 4 0 4.8 2.6 4.8 6V23h-4v-6.8c0-1.6 0-3.7-2.3-3.7s-2.6 1.7-2.6 3.6V23H8V8.5z"/>
-          </svg>
-        </span>
-        <span class="social-text">LinkedIn</span>
-      </a>
-    </div>
-  </div>
-
 </main>
 
-<footer class="footer">
-  <div class="container footer-inner">
-    <div class="footer-text">© <span id="yr"></span> Equality Times</div>
-    <div class="footer-text">Public Legal Education Platform • equalitytimesindia@gmail.com</div>
+<footer class="professional-footer">
+  <div class="professional-footer-inner">
+    <div class="professional-footer-main">
+      <div class="professional-footer-brand">
+        <img src="/assets/logo-new.png" alt="Equality Times">
+        <div class="professional-footer-tagline">LEGAL EDUCATION &nbsp;•&nbsp; RESEARCH &nbsp;•&nbsp; PUBLIC AWARENESS</div>
+        <p>A legal education, research and public awareness platform exploring law, equality, human rights, technology and access to justice.</p>
+      </div>
+      <div class="professional-footer-column">
+        <h4>Explore</h4>
+        <a href="/">Home</a><a href="/about/">About</a><a href="/articles/">Articles</a><a href="/videos/">Videos</a><a href="/research/">Research</a><a href="/team/">Our Team</a><a href="/contact/">Contact</a>
+      </div>
+      <div class="professional-footer-column"><h4>Contribute</h4><a href="/write/">Write for Equality Times</a><a href="/write/">Submission Guidelines</a></div>
+      <div class="professional-footer-column"><h4>Connect</h4><a href="https://www.youtube.com/c/fightforequality" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/equality__times/" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/company/equalitytimesindia" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.facebook.com/TheEqualityTimes" target="_blank" rel="noopener">Facebook</a><a href="https://x.com/equality__times" target="_blank" rel="noopener">X</a><a href="https://mail.google.com/mail/?view=cm&fs=1&to=equalitytimesindia%40gmail.com">Email</a></div>
+    </div>
+    <div class="professional-footer-bottom"><span>© 2026 Equality Times. All rights reserved.</span><span>Legal Education · Research · Public Awareness</span></div>
   </div>
 </footer>
 
-<script src="assets/site.js"></script>
+<script src="/assets/site.js"></script>
 </body>
 </html>

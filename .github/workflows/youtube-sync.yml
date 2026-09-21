@@ -1,0 +1,71 @@
+name: Sync YouTube Videos
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-youtube:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install yt-dlp
+        run: python -m pip install --upgrade yt-dlp
+
+      - name: Fetch latest public videos
+        run: |
+          python - <<'PY'
+          import json, subprocess
+
+          channel = "https://www.youtube.com/@equalitytimes/videos"
+
+          result = subprocess.run(
+              [
+                  "yt-dlp",
+                  "--flat-playlist",
+                  "--playlist-end", "30",
+                  "--dump-single-json",
+                  "--skip-download",
+                  "--no-warnings",
+                  channel,
+              ],
+              check=True,
+              capture_output=True,
+              text=True,
+          )
+
+          data = json.loads(result.stdout)
+          videos = []
+
+          for entry in data.get("entries", []):
+              if not entry or not entry.get("id"):
+                  continue
+
+              videos.append({
+                  "id": entry["id"],
+                  "title": entry.get("title") or "",
+                  "url": f"https://www.youtube.com/watch?v={entry['id']}",
+                  "thumbnail": f"https://i.ytimg.com/vi/{entry['id']}/hqdefault.jpg",
+                  "date": entry.get("upload_date") or "",
+              })
+
+          with open("assets/youtube.json", "w", encoding="utf-8") as f:
+              json.dump(videos, f, ensure_ascii=False, indent=2)
+
+          print(f"Synced {len(videos)} videos.")
+          PY
+
+      - name: Commit changes
+        run: |
+          git config user.name "Equality Times Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/youtube.json
+          git diff --cached --quiet || git commit -m "Sync latest YouTube videos"
+          git push

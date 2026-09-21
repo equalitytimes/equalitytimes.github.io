@@ -1,0 +1,114 @@
+media:
+  - name: article_images
+    label: Article Images
+    input: media/article-images
+    output: /media/article-images
+    extensions: [jpg, jpeg, png, webp, gif]
+    categories: [image]
+    rename: safe
+
+  - name: author_images
+    label: Author Photos
+    input: media/author-images
+    output: /media/author-images
+    extensions: [jpg, jpeg, png, webp, gif]
+    categories: [image]
+    rename: safe
+
+content:
+  - name: articles
+    label: Articles
+    type: collection
+    path: _posts
+    filename: "{year}-{month}-{day}-{title}.md"
+    format: yaml-frontmatter
+    fields:
+      - name: layout
+        label: false
+        type: string
+        hidden: true
+        default: article
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: author
+        label: Author
+        type: string
+        required: true
+      - name: author_photo
+        label: Author photo
+        type: image
+        options:
+          media: author_images
+          path: .
+          extensions: [jpg, jpeg, png, webp, gif]
+          rename: safe
+      - name: author_bio
+        label: Author bio
+        type: text
+      - name: date
+        label: Publication date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          values:
+            - Constitution
+            - Human Rights
+            - Social Justice
+            - "Law & Society"
+            - Criminal Law
+            - "Gender & Law"
+            - Cyber Law
+            - Legal Awareness
+            - Student Zone
+            - Opinion
+            - Research
+            - Other
+      - name: excerpt
+        label: Short description
+        type: text
+        required: true
+      - name: cover_image
+        label: Cover image
+        type: image
+        options:
+          media: article_images
+          path: .
+          extensions: [jpg, jpeg, png, webp, gif]
+          rename: safe
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+      - name: body
+        label: Article
+        type: text
+        required: true
+
+    view:
+      fields: [title, author, category, date]
+      primary: title
+      sort: date
+      search: [title, author, category, excerpt]
+      default:
+        sort: date
+        order: desc
+    operations:
+      rename: false
+
+settings:
+  content: true
+  commit:
+    identity: user
+    templates:
+      create: "Publish article: {name}"
+      update: "Update article: {name}"
+      delete: "Remove article: {name}"
+      rename: "Rename article: {oldPath} -> {newPath}"

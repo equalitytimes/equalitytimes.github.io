@@ -1,6 +1,6 @@
 ---
 layout: null
-permalink: /about.html
+permalink: /about/
 ---
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ permalink: /about.html
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Equality Times</title>
   <meta name="description" content="About Equality Times — legal education, research and public awareness exploring law, society, equality, technology and access to justice.">
-  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
 
   <style>
     :root{
@@ -36,11 +36,12 @@ permalink: /about.html
 
     a{color:inherit;text-decoration:none}
 
-    .et-header{
+     .et-header{
       background:var(--dark);
       color:#fff;
-      position:relative;
-      z-index:10;
+      position:sticky;
+      top:0;
+      z-index:1000;
     }
 
     .et-header-inner{
@@ -425,8 +426,12 @@ permalink: /about.html
   background:#080d11 !important;
   color:#fff !important;
   width:100% !important;
-  position:relative !important;
-  z-index:100 !important;
+  position:fixed !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  z-index:1000 !important;
+  box-shadow:0 4px 18px rgba(0,0,0,.10) !important;
 }
 .site-header-inner{
   width:min(1180px,calc(100% - 56px)) !important;
@@ -540,6 +545,33 @@ permalink: /about.html
   }
 }
 
+</style>
+<style>
+/* Global fixed navigation */
+body{padding-top:88px!important}
+@media(max-width:900px){body{padding-top:0!important}}
+@media(max-width:600px){body{padding-top:0!important}}
+/* About page dark-mode content */
+body.et-dark-mode{background:#0d1117!important;color:#eef2f6!important}
+body.et-dark-mode .et-content{background:#0d1117!important}
+body.et-dark-mode .et-section-label{color:#aab4c0!important}
+body.et-dark-mode .et-intro p,
+body.et-dark-mode .et-audience p,
+body.et-dark-mode .et-approach p,
+body.et-dark-mode .et-vision p,
+body.et-dark-mode .et-work-item p{color:#aab4c0!important}
+body.et-dark-mode .et-intro h2,
+body.et-dark-mode .et-work h2,
+body.et-dark-mode .et-audience h2,
+body.et-dark-mode .et-approach h2,
+body.et-dark-mode .et-vision h2,
+body.et-dark-mode .et-work-item h3{color:#eef2f6!important}
+body.et-dark-mode .et-work-grid{background:#303944!important;border-color:#303944!important}
+body.et-dark-mode .et-work-item{background:#151a21!important}
+body.et-dark-mode .et-audience,
+body.et-dark-mode .et-approach,
+body.et-dark-mode .et-vision{border-color:#303944!important}
+body.et-dark-mode .et-footer{background:#080d11!important}
 
 /* Mobile header flow fix: keep the full header in document flow. */
 @media (max-width: 900px){
@@ -745,7 +777,7 @@ permalink: /about.html
         <a href="https://www.linkedin.com/company/equalitytimesindia" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://www.facebook.com/TheEqualityTimes" target="_blank" rel="noopener">Facebook</a>
         <a href="https://x.com/equality__times" target="_blank" rel="noopener">X</a>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=equalitytimesindia%40gmail.com">Email</a>
+        <a href="mailto:equalitytimesindia@gmail.com">Email</a>
       </div>
     </div>
 
@@ -756,5 +788,6 @@ permalink: /about.html
   </div>
 </footer>
 
+<script src="{{ '/assets/site.js' | relative_url }}"></script>
 </body>
 </html>

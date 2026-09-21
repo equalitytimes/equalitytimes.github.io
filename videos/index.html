@@ -7,7 +7,7 @@
   <meta name="description" content="Watch Equality Times videos on law, equality, human rights, and social justice."/>
   <link rel="stylesheet" href="/assets/style.css"/>
 <style>
-.site-header{background:#080d11!important;color:#fff!important;width:100%!important;position:relative!important;z-index:100!important}
+.site-header{background:#080d11!important;color:#fff!important;width:100%!important;position:fixed!important;top:0!important;z-index:1000!important;box-shadow:0 4px 18px rgba(0,0,0,.08)!important}
 .site-header-inner{width:min(1180px,calc(100% - 56px))!important;min-height:88px!important;margin:0 auto!important;padding:0!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:30px!important}
 .site-brand{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;flex:0 0 auto!important;gap:4px!important;text-decoration:none!important}
 .site-brand img{display:block!important;width:128px!important;height:auto!important;max-width:128px!important;max-height:none!important;object-fit:contain!important}
@@ -18,6 +18,20 @@
 .site-nav a::before,.site-nav a::after{content:none!important;display:none!important}
 @media(max-width:900px){.site-header-inner{width:calc(100% - 44px)!important;min-height:auto!important;padding:18px 0!important;flex-direction:column!important;align-items:flex-start!important}.site-brand-tagline{font-size:8px!important}.site-nav{width:100%!important;justify-content:flex-start!important;gap:20px!important;overflow-x:auto!important;flex-wrap:nowrap!important}.site-nav a{font-size:15px!important;padding:8px 0 12px!important}}
 @media(max-width:600px){.site-header-inner{width:calc(100% - 32px)!important;padding:16px 0!important}.site-brand img{width:128px!important}.site-brand-tagline{font-size:7.5px!important;letter-spacing:.8px!important}.site-nav{gap:16px!important}.site-nav a{font-size:14px!important;padding:7px 0 11px!important}}
+</style>
+    <link rel="icon" type="image/png" href="/assets/logo-new.png">
+
+<style>
+/* Global fixed navigation */
+.site-header,.et-header{position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;z-index:1000!important;box-shadow:0 4px 18px rgba(0,0,0,.10)!important}
+body{padding-top:88px!important}
+@media(max-width:900px){body{padding-top:0!important}}
+@media(max-width:600px){body{padding-top:0!important}}
+
+/* Mobile header flow fix: keep the full header in document flow. */
+@media (max-width: 900px){
+  .site-header{position:sticky!important;top:0!important;left:auto!important;right:auto!important}
+}
 </style>
 </head>
 <body>
@@ -34,6 +48,9 @@
       <a href="/team/">Our Team</a>
       <a href="/contact/">Contact</a>
     </nav>
+
+    </div>
+    </div>
   </div>
 </header>
 
@@ -117,6 +134,6 @@
   </div>
 </footer>
 
-<script src="assets/site.js"></script>
+<script src="/assets/site.js"></script>
 </body>
 </html>

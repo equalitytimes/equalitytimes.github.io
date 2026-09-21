@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | Equality Times</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | escape }}">
+  <link rel="stylesheet" href="/assets/style.css">
+<style>
+.site-header{background:#080d11!important;color:#fff!important;width:100%!important;position:fixed!important;top:0!important;z-index:1000!important}
+.site-header-inner{width:min(1180px,calc(100% - 56px))!important;min-height:88px!important;margin:0 auto!important;padding:0!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:30px!important}
+.site-brand{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;flex:0 0 auto!important;gap:4px!important;text-decoration:none!important}
+.site-brand img{display:block!important;width:128px!important;height:auto!important;max-width:128px!important;max-height:none!important;object-fit:contain!important}
+.site-brand-tagline{display:block!important;margin:0!important;color:#d7dbe0!important;font-family:Arial,Helvetica,sans-serif!important;font-size:8.5px!important;line-height:1!important;font-weight:600!important;letter-spacing:1.05px!important;white-space:nowrap!important;text-transform:uppercase!important}
+.site-nav{display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:28px!important;flex:0 0 auto!important}
+.site-nav a{display:block!important;position:relative!important;box-sizing:border-box!important;color:#fff!important;text-decoration:none!important;font-family:Arial,Helvetica,sans-serif!important;font-size:15px!important;line-height:1.2!important;font-weight:600!important;padding:31px 0 27px!important;margin:0!important;border:0!important;border-bottom:3px solid transparent!important;white-space:nowrap!important}
+.site-nav a:hover,.site-nav a.active{color:#fff!important;border-bottom-color:#f4c400!important}
+.site-nav a::before,.site-nav a::after{content:none!important;display:none!important}
+@media(max-width:900px){.site-header-inner{width:calc(100% - 44px)!important;min-height:auto!important;padding:18px 0!important;flex-direction:column!important;align-items:flex-start!important}.site-brand-tagline{font-size:8px!important}.site-nav{width:100%!important;justify-content:flex-start!important;gap:20px!important;overflow-x:auto!important;flex-wrap:nowrap!important}.site-nav a{font-size:15px!important;padding:8px 0 12px!important}}
+@media(max-width:600px){.site-header-inner{width:calc(100% - 32px)!important;padding:16px 0!important}.site-brand img{width:128px!important}.site-brand-tagline{font-size:7.5px!important;letter-spacing:.8px!important}.site-nav{gap:16px!important}.site-nav a{font-size:14px!important;padding:7px 0 11px!important}}
+</style>
+<style>
+.author-profile{margin:42px 0 0;padding:28px 0 0;border-top:1px solid #d8d8d2;display:flex;gap:20px;align-items:flex-start}.author-profile-photo{width:88px;height:88px;border-radius:50%;object-fit:cover;flex:0 0 88px}.author-profile-copy{min-width:0}.author-profile-kicker{margin:0 0 6px;font:700 11px/1.2 Arial,Helvetica,sans-serif;letter-spacing:1.4px;text-transform:uppercase;color:#777}.author-profile-name{margin:0 0 7px;font:700 22px/1.25 Georgia,"Times New Roman",serif;color:#111923}.author-profile-bio{margin:0;color:#4e5862;font:15px/1.7 Arial,Helvetica,sans-serif}@media(max-width:600px){.author-profile{gap:14px}.author-profile-photo{width:68px;height:68px;flex-basis:68px}.author-profile-name{font-size:19px}.author-profile-bio{font-size:14px}}body.et-dark-mode .author-profile{border-top-color:#303944!important}body.et-dark-mode .author-profile-kicker{color:#aab4c0!important}body.et-dark-mode .author-profile-name{color:#eef2f6!important}body.et-dark-mode .author-profile-bio{color:#aab4c0!important}
+</style>
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/equalitytimes/equalitytimes-test/main/assets/logo-new.png">
+
+<style>
+/* Global fixed navigation */
+.site-header,.et-header{position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;z-index:1000!important;box-shadow:0 4px 18px rgba(0,0,0,.10)!important}
+body{padding-top:88px!important}
+@media(max-width:900px){body{padding-top:0!important}}
+@media(max-width:600px){body{padding-top:0!important}}
+
+/* Mobile header flow fix: keep the full header in document flow. */
+@media (max-width: 900px){
+  .site-header{position:sticky!important;top:0!important;left:auto!important;right:auto!important}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="Equality Times home"><img src="https://raw.githubusercontent.com/equalitytimes/equalitytimes-test/main/assets/logo-new.png" alt="Equality Times"><span class="site-brand-tagline">LEGAL EDUCATION&nbsp;&nbsp;•&nbsp;&nbsp;RESEARCH&nbsp;&nbsp;•&nbsp;&nbsp;PUBLIC AWARENESS</span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/about/' | relative_url }}">About</a>
+      <a href="{{ '/articles/' | relative_url }}" class="active">Articles</a>
+      <a href="{{ '/videos/' | relative_url }}">Videos</a>
+      <a href="{{ '/research/' | relative_url }}">Research</a>
+      <a href="{{ '/team/' | relative_url }}">Our Team</a>
+      <a href="{{ '/contact/' | relative_url }}">Contact</a>
+    </nav>
+
+    </div>
+    </div>
+  </div>
+</header>
+
+<main class="article-page">
+  <div class="container article-shell">
+    <article class="article-main">
+      <div class="article-breadcrumb">
+        <a href="{{ '/' | relative_url }}">Home</a><span>›</span>
+        <a href="{{ '/articles/' | relative_url }}">Articles</a><span>›</span>
+        {{ page.category | default: "Article" }}
+      </div>
+
+      <div class="article-category">{{ page.category | default: "Article" }}</div>
+      <h1 class="article-title">{{ page.title }}</h1>
+      {% if page.excerpt %}<p class="article-excerpt">{{ page.excerpt }}</p>{% endif %}
+
+      <div class="article-meta">
+        <strong>{{ page.author | default: "Equality Times" }}</strong><br>
+        <span>{{ page.date | date: "%d %B %Y" }}</span>
+      </div>
+
+      {% if page.cover_image %}
+      <figure class="article-cover">
+        <img src="{{ page.cover_image }}" alt="{{ page.title | escape }}">
+      </figure>
+      {% endif %}
+
+      <div class="article-content">{{ content }}</div>
+
+      {% if page.author_photo or page.author_bio %}
+      <section class="author-profile" aria-label="About the author">
+        {% if page.author_photo %}<img class="author-profile-photo" src="{{ page.author_photo }}" alt="{{ page.author | escape }}">{% endif %}
+        <div class="author-profile-copy">
+          <p class="author-profile-kicker">About the Author</p>
+          <h2 class="author-profile-name">{{ page.author | default: "Equality Times" }}</h2>
+          {% if page.author_bio %}<p class="author-profile-bio">{{ page.author_bio }}</p>{% endif %}
+        </div>
+      </section>
+      {% endif %}
+
+      {% if page.tags %}
+      <div class="article-tags">
+        {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+      </div>
+      {% endif %}
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="article-sidebar-card">
+        <h3>About Equality Times</h3>
+        <p>A public legal education platform focused on law, equality, society, human rights and legal awareness.</p>
+        <a class="btn btn-primary" href="{{ '/about/' | relative_url }}">About the Platform →</a>
+      </div>
+
+      <div class="article-sidebar-card">
+        <h3>Explore</h3>
+        <a class="article-sidebar-link" href="{{ '/articles/' | relative_url }}">All Articles →</a>
+        <a class="article-sidebar-link" href="{{ '/research/' | relative_url }}">Research →</a>
+        <a class="article-sidebar-link" href="{{ '/videos/' | relative_url }}">Videos →</a>
+      </div>
+
+      <div class="article-sidebar-card article-submit-card">
+        <h3>Write for Equality Times</h3>
+        <p>Have original legal writing or research to share?</p>
+        <a class="btn btn-secondary" href="/write/">Submission Guidelines →</a>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="professional-footer">
+  <div class="professional-footer-inner">
+    <div class="professional-footer-main">
+      <div class="professional-footer-brand">
+        <img src="https://raw.githubusercontent.com/equalitytimes/equalitytimes-test/main/assets/logo-new.png" alt="Equality Times">
+        <div class="professional-footer-tagline">LEGAL EDUCATION &nbsp;•&nbsp; RESEARCH &nbsp;•&nbsp; PUBLIC AWARENESS</div>
+        <p>A legal education, research and public awareness platform exploring law, equality, human rights, technology and access to justice.</p>
+      </div>
+
+      <div class="professional-footer-column">
+        <h4>Explore</h4>
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/articles/">Articles</a>
+        <a href="/videos/">Videos</a>
+        <a href="/research/">Research</a>
+        <a href="/team/">Our Team</a>
+        <a href="/contact/">Contact</a>
+      </div>
+
+      <div class="professional-footer-column">
+        <h4>Contribute</h4>
+        <a href="/write/">Write for Equality Times</a>
+        <a href="/write/">Submission Guidelines</a>
+      </div>
+
+      <div class="professional-footer-column">
+        <h4>Connect</h4>
+        <a href="https://www.youtube.com/c/fightforequality" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/equality__times/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/company/equalitytimesindia" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.facebook.com/TheEqualityTimes" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://x.com/equality__times" target="_blank" rel="noopener">X</a>
+        <a href="mailto:equalitytimesindia@gmail.com">Email</a>
+      </div>
+    </div>
+
+    <div class="professional-footer-bottom">
+      <span>© 2026 Equality Times. All rights reserved.</span>
+      <span>Legal Education · Research · Public Awareness</span>
+    </div>
+  </div>
+</footer>
+
+<script src="{{ '/assets/site.js' | relative_url }}"></script>
+</body>
+</html>

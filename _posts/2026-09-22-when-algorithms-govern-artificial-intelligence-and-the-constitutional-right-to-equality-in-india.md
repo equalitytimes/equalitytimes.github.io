@@ -67,7 +67,7 @@ A model can accurately reproduce patterns in its dataset and still reproduce an 
 
 This distinction matters greatly in public administration. If an automated system is used to determine access to employment, welfare, education or other State-supported opportunities, efficiency cannot be the only measure by which it is evaluated.
 
-##The Problem of Opacity
+The Problem of Opacity
 
 Another difficulty is transparency.
 
@@ -81,7 +81,7 @@ Human review therefore cannot be reduced to a person merely pressing an approval
 
 The original research paper similarly identifies transparency, human supervision, regular evaluation and accountability as necessary safeguards when AI is used in administrative decision-making.
 
-##Equality, Privacy and Personal Data
+## Equality, Privacy and Personal Data
 
 The equality question is closely connected with privacy.
 
@@ -93,7 +93,7 @@ India has also enacted the Digital Personal Data Protection Act, 2023, which est
 
 Data protection and equality are not identical constitutional questions. Yet they can intersect. The collection and processing of personal information may influence how individuals are classified, assessed or treated. For that reason, responsible AI governance cannot consider data protection, privacy and equality as completely separate concerns.
 
-##Constitutional Accountability Cannot Be Automated
+## Constitutional Accountability Cannot Be Automated
 
 The most important principle is perhaps the simplest: delegating a decision to technology does not mean delegating constitutional responsibility.
 
@@ -117,7 +117,7 @@ The Constitution was designed to place limits on public power. Technological adv
 
 India's constitutional commitment to equality therefore has to be considered not only at the level of legislation and administrative rules, but also at the level of the technologies through which those rules are implemented.
 
-##Conclusion
+## Conclusion
 
 Artificial intelligence can transform the way governments and institutions make decisions. But efficiency is not a substitute for equality, and automation is not a substitute for accountability.
 
@@ -129,7 +129,7 @@ An AI system may process the data. It may identify a pattern. It may even recomm
 
 But where public power is involved, the constitutional responsibility remains human.
 
-##Notes
+## Notes
 
 1. Constitution of India, arts. 14 and 15.
 2. E.P. Royappa v. State of Tamil Nadu, (1974) 4 SCC 3.
@@ -141,7 +141,7 @@ But where public power is involved, the constitutional responsibility remains hu
 8. Cathy O'Neil, Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy (Crown, 2016).
 9. UN Human Rights Council, The Right to Privacy in the Digital Age, A/HRC/48/31 (2021).
 
-Selected Bibliography
+## Selected Bibliography
 
 Constitution of India.
 

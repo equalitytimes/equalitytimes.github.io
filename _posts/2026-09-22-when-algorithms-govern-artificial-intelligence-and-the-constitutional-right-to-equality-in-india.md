@@ -15,8 +15,6 @@ tags:
   - Constitutional Law
   - "Algorithm "
 ---
-When Algorithms Govern: Artificial Intelligence and the Constitutional Right to Equality in India
-
 As artificial intelligence becomes part of administration, employment, public services and decision-making, a constitutional question is becoming increasingly important: when an automated system produces unequal outcomes, who remains responsible?
 
 Artificial intelligence is increasingly moving from laboratories and private technology platforms into areas that directly affect people’s lives. Governments and institutions are exploring AI for public-service delivery, administrative decision-making, welfare systems, recruitment, surveillance and other forms of governance. India’s IndiaAI Mission reflects the scale of this transition, with the Government seeking to develop national AI infrastructure while also emphasising safe and trusted AI.

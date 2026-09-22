@@ -2,6 +2,7 @@
 layout: article
 title: Untouchability In India From Social Exclusion to a Constitutional Crime
 author: Equality Times
+author_photo: /media/author-images/Harshal Gawande.jpeg
 date: 2026-08-12
 category: Constitution
 excerpt: this article talk about indian constitution and untouchability

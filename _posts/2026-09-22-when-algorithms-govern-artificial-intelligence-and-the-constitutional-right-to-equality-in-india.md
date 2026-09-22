@@ -25,7 +25,7 @@ The Indian Constitution does not contain a provision specifically written for ar
 
 The central concern is straightforward: an algorithm may be neutral in its instructions while producing unequal consequences because of the data, assumptions or proxies built into the system. That possibility becomes particularly important in India, where social and economic inequalities have developed over generations.
 
-Equality Beyond the Written Rule
+## Equality Beyond the Written Rule
 
 Article 14 guarantees equality before the law and equal protection of the laws. Indian constitutional jurisprudence has progressively moved beyond a narrow understanding of equality as merely treating everyone identically. The Supreme Court's decision in E.P. Royappa v. State of Tamil Nadu is an important part of this development, with arbitrariness in State action becoming closely connected with the constitutional guarantee of equality. The Court has subsequently reiterated that State action cannot be arbitrary and must satisfy requirements of fairness and reason.
 

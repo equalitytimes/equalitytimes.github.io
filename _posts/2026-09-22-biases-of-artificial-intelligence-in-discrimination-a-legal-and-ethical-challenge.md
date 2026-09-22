@@ -3,7 +3,6 @@ layout: article
 title: "Biases of Artificial Intelligence in Discrimination: A Legal and Ethical
   Challenge"
 author: Prakriti Lande
-author_bio: "2nd year law student at Nagpur University "
 date: 2026-09-05
 category: Research
 excerpt: "How AI systems can reproduce or amplify discrimination through biased
@@ -17,8 +16,6 @@ tags:
   - "Discrimination "
   - "Employment "
 ---
-Biases of Artificial Intelligence in Discrimination: A Legal and Ethical Challenge
-
 Artificial intelligence (AI) is increasingly being used to assist or influence decisions that have significant consequences for individuals. Employers use automated systems to screen applicants, financial institutions use algorithms to assess borrowers, housing providers use automated tools to evaluate prospective tenants, and digital platforms use algorithmic systems to determine which advertisements and opportunities are presented to users.
 
 These technologies can improve efficiency and allow institutions to process large amounts of information. At the same time, their increasing role in decision-making raises an important legal question: what happens when an automated system produces discriminatory outcomes?
@@ -27,7 +24,7 @@ AI systems are not inherently neutral. They are developed by people, trained on 
 
 Algorithmic discrimination therefore presents a challenge for existing anti-discrimination law. The use of technology does not, by itself, remove legal obligations that would apply to a comparable human decision. However, automated decision-making can make discriminatory practices more difficult to identify, explain and challenge. Addressing this problem requires a combination of legal accountability, appropriate testing, transparency and meaningful human oversight.
 
-How Bias Enters Artificial Intelligence
+## How Bias Enters Artificial Intelligence
 
 Bias can enter an AI system at several stages of its development and use.
 
@@ -39,7 +36,7 @@ Bias can also result from the objectives established for an algorithm. A system 
 
 The problem, therefore, is not simply that an algorithm can be described as "biased." A more fundamental concern is that a mathematical process that appears neutral may reproduce existing inequalities while giving the resulting decision an appearance of objectivity.
 
-AI and Employment Discrimination
+## AI and Employment Discrimination
 
 Employment is one of the most significant areas in which algorithmic decision-making can affect individual rights. Employers may use automated systems to advertise vacancies, screen résumés, rank applicants, evaluate assessments, analyse interviews or recommend candidates.
 
@@ -51,7 +48,7 @@ Consider an automated assessment system that systematically disadvantages applic
 
 This illustrates a broader principle: automation changes the mechanism through which a decision is made, but it does not automatically remove the legal responsibilities associated with that decision.
 
-Algorithmic Discrimination in Housing
+## Algorithmic Discrimination in Housing
 
 Housing is another area in which algorithmic systems can have significant consequences. Landlords and property managers may use automated tenant-screening systems that analyse credit histories, rental records, debts and other information.
 
@@ -61,7 +58,7 @@ Another significant case involved Meta Platforms. In 2022, the U.S. Department o
 
 These cases demonstrate that algorithmic discrimination can occur even before an individual formally applies for housing. If an automated advertising system determines who is likely to see a housing opportunity, some individuals may effectively be excluded from an opportunity without knowing that it was available to them.
 
-AI in Credit and Lending
+## AI in Credit and Lending
 
 Artificial intelligence is also being used in financial decision-making. Lenders may employ increasingly sophisticated models to assess creditworthiness and make lending decisions.
 
@@ -73,7 +70,7 @@ The Consumer Financial Protection Bureau has addressed this issue in relation to
 
 This principle is important for accountability. A person denied credit should not lose the protections provided by law simply because an institution has incorporated an automated system into its decision-making process.
 
-Transparency and Accountability
+## Transparency and Accountability
 
 One of the central legal challenges associated with AI is determining responsibility.
 
@@ -85,7 +82,7 @@ Transparency does not necessarily require organisations to publish their complet
 
 The ability to challenge a decision is equally important. Where an automated decision has significant consequences, individuals should have a realistic opportunity to seek review and correction rather than being left with an unexplained computer-generated outcome.
 
-Preventing Algorithmic Discrimination
+## Preventing Algorithmic Discrimination
 
 Addressing algorithmic discrimination requires more than improving the technical accuracy of AI systems. Organisations should also evaluate whether systems produce materially different outcomes or error rates for different groups.
 
@@ -99,7 +96,7 @@ Where automated systems are used in areas such as employment, housing, credit, e
 
 The role of public authorities is equally important. In April 2023, the U.S. Equal Employment Opportunity Commission, Department of Justice, Consumer Financial Protection Bureau and Federal Trade Commission issued a joint statement emphasising that existing laws against discrimination and unfair practices apply to automated systems. The statement reflected a broader regulatory position: technological innovation does not place decision-making outside the reach of existing legal protections.
 
-The Legal Challenge Ahead
+## The Legal Challenge Ahead
 
 Artificial intelligence has considerable potential to improve decision-making and expand access to services. But technological efficiency should not be treated as synonymous with neutrality.
 
@@ -109,7 +106,7 @@ This creates a difficult question for modern law. Existing anti-discrimination f
 
 The challenge is therefore not necessarily to prevent the use of AI. It is to ensure that technological development remains compatible with equality, accountability and individual rights.
 
-Conclusion
+## Conclusion
 
 Artificial intelligence is changing the way institutions make and implement decisions. As these systems become more influential, questions of algorithmic fairness will increasingly become questions of legal responsibility.
 
@@ -119,7 +116,7 @@ Effective safeguards require appropriate testing, transparency, meaningful human
 
 The future of responsible AI will therefore depend not only on how accurately machines can process information, but also on whether the institutions that deploy them remain accountable for the consequences of their decisions.
 
-References
+## References
 
 1. U.S. Equal Employment Opportunity Commission, Artificial Intelligence and Algorithmic Fairness Initiative, U.S. EEOC.
 2. U.S. Department of Justice, Civil Rights Division, Louis et al. v. SafeRent et al., Statement of Interest concerning algorithm-based tenant screening and the Fair Housing Act.

@@ -2,6 +2,7 @@
 layout: article
 title: "Cybercrime in India: Emerging Legal Challenges in the Digital Age"
 author: Unnati Thorat
+author_bio: "2nd year law student at Nagpur University "
 date: 2026-09-01
 category: Cyber Law
 excerpt: Cybercrime is reshaping the challenges faced by India's legal system.

@@ -37,7 +37,7 @@ An automated decision is still a decision. If the State uses technology to exerc
 
 This is particularly important because the apparent objectivity of a computer-generated result can make discrimination harder to identify. A decision produced by a mathematical model may appear neutral even when the underlying data reflects existing social inequalities.
 
-Article 15 and the Problem of Indirect Discrimination
+## Article 15 and the Problem of Indirect Discrimination
 
 Article 15(1) prohibits the State from discriminating against citizens on specified grounds including religion, race, caste, sex and place of birth. The Constitution also permits particular forms of affirmative action through provisions such as Articles 15(3) and 15(4).
 
@@ -51,7 +51,7 @@ The existence of such a proxy does not automatically establish a constitutional 
 
 The problem is especially significant in India because data is not produced in a social vacuum. Historical patterns of caste, gender, region, education, income and access to resources can influence the datasets from which automated systems learn.
 
-When Historical Inequality Enters the Dataset
+## When Historical Inequality Enters the Dataset
 
 AI systems are dependent on data. A system trained on historical information may identify patterns in that information and use them to make predictions or classifications.
 
@@ -67,7 +67,7 @@ A model can accurately reproduce patterns in its dataset and still reproduce an 
 
 This distinction matters greatly in public administration. If an automated system is used to determine access to employment, welfare, education or other State-supported opportunities, efficiency cannot be the only measure by which it is evaluated.
 
-The Problem of Opacity
+##The Problem of Opacity
 
 Another difficulty is transparency.
 
@@ -81,7 +81,7 @@ Human review therefore cannot be reduced to a person merely pressing an approval
 
 The original research paper similarly identifies transparency, human supervision, regular evaluation and accountability as necessary safeguards when AI is used in administrative decision-making.
 
-Equality, Privacy and Personal Data
+##Equality, Privacy and Personal Data
 
 The equality question is closely connected with privacy.
 
@@ -93,7 +93,7 @@ India has also enacted the Digital Personal Data Protection Act, 2023, which est
 
 Data protection and equality are not identical constitutional questions. Yet they can intersect. The collection and processing of personal information may influence how individuals are classified, assessed or treated. For that reason, responsible AI governance cannot consider data protection, privacy and equality as completely separate concerns.
 
-Constitutional Accountability Cannot Be Automated
+##Constitutional Accountability Cannot Be Automated
 
 The most important principle is perhaps the simplest: delegating a decision to technology does not mean delegating constitutional responsibility.
 
@@ -105,7 +105,7 @@ At a minimum, high-impact public-sector AI systems require mechanisms for meanin
 
 Regular evaluation is equally important. A system that performs fairly when introduced may produce different results as its data, users or operating environment changes. Accountability must therefore continue throughout the life of the system rather than ending when the software is deployed.
 
-India’s AI Future and the Equality Question
+## India’s AI Future and the Equality Question
 
 India is building significant national capacity around artificial intelligence. The IndiaAI Mission has been organised around areas including computing infrastructure, datasets, foundation models, future skills, innovation and start-up development, and safe and trusted AI. Official IndiaAI material describes the mission as seeking an inclusive and future-ready AI ecosystem.
 
@@ -117,7 +117,7 @@ The Constitution was designed to place limits on public power. Technological adv
 
 India's constitutional commitment to equality therefore has to be considered not only at the level of legislation and administrative rules, but also at the level of the technologies through which those rules are implemented.
 
-Conclusion
+##Conclusion
 
 Artificial intelligence can transform the way governments and institutions make decisions. But efficiency is not a substitute for equality, and automation is not a substitute for accountability.
 
@@ -129,7 +129,7 @@ An AI system may process the data. It may identify a pattern. It may even recomm
 
 But where public power is involved, the constitutional responsibility remains human.
 
-Notes
+##Notes
 
 1. Constitution of India, arts. 14 and 15.
 2. E.P. Royappa v. State of Tamil Nadu, (1974) 4 SCC 3.

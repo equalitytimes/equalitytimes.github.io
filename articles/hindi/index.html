@@ -94,9 +94,12 @@ body.et-dark-mode .article-language-empty{color:#aab4c0}
     </nav>
 
     <div class="et-article-list">
-      {% assign sorted_posts = site.posts | where: "language", "hi" | sort: "date" | reverse %}
+      {% assign sorted_posts = site.posts | sort: "date" | reverse %}
+      {% assign matching_count = 0 %}
       {% if sorted_posts.size > 0 %}
         {% for post in sorted_posts %}
+          {% if post.language == "Hindi" or post.language == "hi" %}
+            {% assign matching_count = matching_count | plus: 1 %}
           <article class="et-article-card">
             <a class="et-article-card-media" href="{{ post.url | relative_url }}">
               {% if post.cover_image %}
@@ -115,12 +118,11 @@ body.et-dark-mode .article-language-empty{color:#aab4c0}
               <a class="btn btn-primary" href="{{ post.url | relative_url }}">Read Article →</a>
             </div>
           </article>
+          {% endif %}
         {% endfor %}
-      {% else %}
-        <div class="card">
-          <h3>No articles published yet.</h3>
-          <p>Your first approved article will appear here automatically.</p>
-        </div>
+      {% endif %}
+      {% if matching_count == 0 %}
+        <div class="article-language-empty">No articles are currently published in this language.</div>
       {% endif %}
     </div>
   </section>

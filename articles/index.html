@@ -97,6 +97,7 @@ body.et-dark-mode .article-language-empty{color:#aab4c0}
       {% assign sorted_posts = site.posts | sort: "date" | reverse %}
       {% if sorted_posts.size > 0 %}
         {% for post in sorted_posts %}
+          {% if post.language == nil or post.language == empty or post.language == "en" or post.language == "English" %}
           <article class="et-article-card" data-article-language="{{ post.language | default: 'en' | downcase }}">
             <a class="et-article-card-media" href="{{ post.url | relative_url }}">
               {% if post.cover_image %}
@@ -115,6 +116,7 @@ body.et-dark-mode .article-language-empty{color:#aab4c0}
               <a class="btn btn-primary" href="{{ post.url | relative_url }}">Read Article →</a>
             </div>
           </article>
+          {% endif %}
         {% endfor %}
       {% else %}
         <div class="card">

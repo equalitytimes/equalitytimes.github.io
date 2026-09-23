@@ -98,7 +98,8 @@ body.et-dark-mode .article-language-empty{color:#aab4c0}
       {% assign matching_count = 0 %}
       {% if sorted_posts.size > 0 %}
         {% for post in sorted_posts %}
-          {% if post.language == "Marathi" or post.language == "mr" %}
+          {% assign post_language = post.language | default: "English" | strip | downcase %}
+          {% if post_language == "marathi" %}
             {% assign matching_count = matching_count | plus: 1 %}
           <article class="et-article-card">
             <a class="et-article-card-media" href="{{ post.url | relative_url }}">

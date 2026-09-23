@@ -297,7 +297,14 @@ body{padding-top:88px!important}
         <div>
           <div class="et-section-head"><div class="et-heading-wrap"><span class="et-heading-line"></span><h2>Featured Article</h2></div></div>
           {% assign sorted_posts = site.posts | sort: "date" | reverse %}
-          {% assign featured = sorted_posts.first %}
+          {% assign featured = nil %}
+          {% for post in sorted_posts %}
+            {% assign post_language = post.language | default: "English" | strip | downcase %}
+            {% if post_language == "english" %}
+              {% assign featured = post %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
           {% if featured %}
           <a href="{{ featured.url | relative_url }}" class="et-feature-card">
             <div class="et-feature-image">
@@ -323,15 +330,18 @@ body{padding-top:88px!important}
           <div class="et-section-head"><div class="et-heading-wrap"><span class="et-heading-line"></span><h2>Latest Articles</h2></div><a href="{{ '/articles/' | relative_url }}" class="et-view-all">View all →</a></div>
           <div class="et-latest-list">
             {% assign latest_count = 0 %}
-            {% for post in sorted_posts limit:4 %}
+            {% for post in sorted_posts %}
               {% if latest_count < 4 %}
-              <a href="{{ post.url | relative_url }}" class="et-latest-item">
-                <div class="et-latest-image">
-                  {% if post.cover_image %}<img src="{{ post.cover_image }}" alt="{{ post.title }}">{% else %}<img src="/assets/hero-final.png" alt="{{ post.title }}">{% endif %}
-                </div>
-                <div><div class="et-category">{{ post.category | default: "LEGAL" }}</div><h3>{{ post.title }}</h3><div class="et-latest-meta">{{ post.date | date: "%d %b %Y" }}</div></div>
-              </a>
-              {% assign latest_count = latest_count | plus: 1 %}
+                {% assign post_language = post.language | default: "English" | strip | downcase %}
+                {% if post_language == "english" %}
+                  <a href="{{ post.url | relative_url }}" class="et-latest-item">
+                    <div class="et-latest-image">
+                      {% if post.cover_image %}<img src="{{ post.cover_image }}" alt="{{ post.title }}">{% else %}<img src="/assets/hero-final.png" alt="{{ post.title }}">{% endif %}
+                    </div>
+                    <div><div class="et-category">{{ post.category | default: "LEGAL" }}</div><h3>{{ post.title }}</h3><div class="et-latest-meta">{{ post.date | date: "%d %b %Y" }}</div></div>
+                  </a>
+                  {% assign latest_count = latest_count | plus: 1 %}
+                {% endif %}
               {% endif %}
             {% endfor %}
           </div>

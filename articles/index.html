@@ -47,6 +47,8 @@ body.et-dark-mode .article-language-nav{border-bottom-color:#303944}
 body.et-dark-mode .article-language-tab{color:#aab4c0}
 body.et-dark-mode .article-language-tab.is-active,body.et-dark-mode .article-language-tab:hover{color:#eef2f6}
 body.et-dark-mode .article-language-empty{color:#aab4c0}
+.article-language-tab{display:block;text-decoration:none}
+.article-language-tab:hover{text-decoration:none}
 </style>
 </head>
 <body>
@@ -85,11 +87,11 @@ body.et-dark-mode .article-language-empty{color:#aab4c0}
       <p>Each published piece is reviewed before appearing on Equality Times. Explore the latest writing below.</p>
     </div>
 
-    <div class="article-language-nav" role="tablist" aria-label="Article language">
-      <button class="article-language-tab is-active" type="button" role="tab" aria-selected="true" data-language="en">English</button>
-      <button class="article-language-tab" type="button" role="tab" aria-selected="false" data-language="hi">हिंदी</button>
-      <button class="article-language-tab" type="button" role="tab" aria-selected="false" data-language="mr">मराठी</button>
-    </div>
+    <nav class="article-language-nav" aria-label="Article language">
+      <a class="article-language-tab is-active" href="{{ '/articles/' | relative_url }}">English</a>
+      <a class="article-language-tab" href="{{ '/articles/hindi/' | relative_url }}">हिंदी</a>
+      <a class="article-language-tab" href="{{ '/articles/marathi/' | relative_url }}">मराठी</a>
+    </nav>
 
     <div class="et-article-list">
       {% assign sorted_posts = site.posts | sort: "date" | reverse %}
@@ -178,39 +180,7 @@ body.et-dark-mode .article-language-empty{color:#aab4c0}
     </div>
   </div>
 </footer>
-
-<script>
-(function(){
-  var tabs=document.querySelectorAll('.article-language-tab');
-  var cards=document.querySelectorAll('.et-article-card[data-article-language]');
-  var list=document.querySelector('.et-article-list');
-  if(!tabs.length||!cards.length||!list) return;
-  var empty=document.createElement('div');
-  empty.className='article-language-empty';
-  empty.textContent='No articles are currently published in this language.';
-  function show(lang){
-    var count=0;
-    tabs.forEach(function(tab){
-      var active=tab.getAttribute('data-language')===lang;
-      tab.classList.toggle('is-active',active);
-      tab.setAttribute('aria-selected',active?'true':'false');
-    });
-    cards.forEach(function(card){
-      var match=(card.getAttribute('data-article-language')||'en').toLowerCase()===lang;
-      card.style.display=match?'grid':'none';
-      if(match) count++;
-    });
-    if(count===0){
-      if(!empty.parentNode) list.appendChild(empty);
-    }else if(empty.parentNode){
-      empty.remove();
-    }
-  }
-  tabs.forEach(function(tab){tab.addEventListener('click',function(){show(tab.getAttribute('data-language'));});});
-  show('en');
-})();
-</script>
-
+\n
 <script src="/assets/site.js"></script>
 </body>
 </html>

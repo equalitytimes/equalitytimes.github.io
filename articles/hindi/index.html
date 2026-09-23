@@ -5,8 +5,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Articles | Equality Times</title>
-  <meta name="description" content="Original writings, legal explainers, research and analysis published by Equality Times.">
+  <title>Hindi Articles | Equality Times</title>
+  <meta name="description" content="Hindi articles published by Equality Times.">
   <link rel="stylesheet" href="/assets/style.css">
 <style>
 .site-header{background:#080d11!important;color:#fff!important;width:100%!important;position:fixed!important;top:0!important;z-index:1000!important;box-shadow:0 4px 18px rgba(0,0,0,.08)!important}
@@ -88,16 +88,16 @@ body.et-dark-mode .article-language-empty{color:#aab4c0}
     </div>
 
     <nav class="article-language-nav" aria-label="Article language">
-      <a class="article-language-tab is-active" href="{{ '/articles/' | relative_url }}">English</a>
-      <a class="article-language-tab" href="{{ '/articles/hindi/' | relative_url }}">हिंदी</a>
+      <a class="article-language-tab" href="{{ '/articles/' | relative_url }}">English</a>
+      <a class="article-language-tab is-active" href="{{ '/articles/hindi/' | relative_url }}">हिंदी</a>
       <a class="article-language-tab" href="{{ '/articles/marathi/' | relative_url }}">मराठी</a>
     </nav>
 
     <div class="et-article-list">
-      {% assign sorted_posts = site.posts | sort: "date" | reverse %}
+      {% assign sorted_posts = site.posts | where: "language", "hi" | sort: "date" | reverse %}
       {% if sorted_posts.size > 0 %}
         {% for post in sorted_posts %}
-          <article class="et-article-card" data-article-language="{{ post.language | default: 'en' | downcase }}">
+          <article class="et-article-card">
             <a class="et-article-card-media" href="{{ post.url | relative_url }}">
               {% if post.cover_image %}
                 <img src="{{ post.cover_image }}" alt="{{ post.title | escape }}">

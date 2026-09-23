@@ -36,6 +36,15 @@ content:
         label: Author
         type: string
         required: true
+      - name: language
+        label: Language
+        type: select
+        required: true
+        options:
+          values:
+            - English
+            - Hindi
+            - Marathi
       - name: author_photo
         label: Author photo
         type: image
@@ -68,9 +77,10 @@ content:
             - Cyber Law
             - Legal Awareness
             - Student Zone
-            - Opinion
+            - "AI & Technology Law"
             - Research
-            - Other
+            - "Caste, Race & Untouchability"
+            - Opinion
       - name: excerpt
         label: Short description
         type: text
@@ -93,7 +103,7 @@ content:
         required: true
 
     view:
-      fields: [title, author, category, date]
+      fields: [title, author, language, category, date]
       primary: title
       sort: date
       search: [title, author, category, excerpt]

@@ -1,6 +1,6 @@
 ---
 layout: article
-title: दलित आणि आदिवासी महिलांवरील हिंसाचार: कायदा, समानता आणि न्यायाचा प्रश्न
+title: "दलित आणि आदिवासी महिलांवरील हिंसाचार: कायदा, समानता आणि न्यायाचा प्रश्न"
 author: Harshal Gawande
 language: Marathi
 author_photo: /media/author-images/Harshal Gawande.jpeg

@@ -751,6 +751,18 @@ body.et-dark-mode .article-continue-card strong{
 }
 </style>
 
+<style>
+.article-top-share{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:16px 0 6px;padding:0;font-size:12px}
+.article-top-share>span{font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-right:2px}
+.article-top-share a,.article-top-share button{border:0;background:none;padding:0;color:inherit;font:inherit;text-decoration:none;cursor:pointer}
+.article-top-share a:hover,.article-top-share button:hover{text-decoration:underline}
+.article-share{margin:34px 0 8px;padding:20px 0;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+.article-share-label{margin-bottom:12px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.article-share-actions{display:flex;flex-wrap:wrap;gap:8px}
+.article-share-actions a,.article-share-actions button{appearance:none;border:1px solid var(--line-soft);background:transparent;color:inherit;border-radius:999px;padding:8px 13px;font:inherit;font-size:13px;text-decoration:none;cursor:pointer}
+.article-share-actions a:hover,.article-share-actions button:hover{border-color:currentColor}
+</style>
+
 </head>
 <body>
 
@@ -786,6 +798,14 @@ body.et-dark-mode .article-continue-card strong{
       <h1 class="article-title">{{ page.title }}</h1>
       {% if page.excerpt %}<p class="article-excerpt">{{ page.excerpt }}</p>{% endif %}
 
+      <div class="article-top-share" aria-label="Share this article">
+        <span>Share</span>
+        <a href="https://wa.me/?text={{ page.title | uri_escape }}%20{{ page.url | absolute_url | uri_escape }}" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | uri_escape }}" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url | uri_escape }}" target="_blank" rel="noopener">X</a>
+        <button type="button" class="article-top-copy-link">Copy link</button>
+      </div>
+
       <div class="article-meta article-reading-header">
         <strong>{{ page.author | default: "Equality Times" }}</strong><br>
         <span>{{ page.date | date: "%d %B %Y" }}</span><span class="article-reading-time" id="article-reading-time">Reading time</span>
@@ -805,6 +825,17 @@ body.et-dark-mode .article-continue-card strong{
       <div class="article-content-wrap">
         <div class="article-content">{{ content }}</div>
       </div>
+
+      <section class="article-share" aria-label="Share this article">
+        <div class="article-share-label">Share this article</div>
+        <div class="article-share-actions">
+          <a href="https://wa.me/?text={{ page.title | uri_escape }}%20{{ page.url | absolute_url | uri_escape }}" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | uri_escape }}" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | uri_escape }}" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url | uri_escape }}" target="_blank" rel="noopener">X</a>
+          <button type="button" class="article-copy-link">Copy link</button>
+        </div>
+      </section>
 
       <section class="author-profile" aria-label="About the author">
         {% if page.author_photo %}<img class="author-profile-photo" src="{{ page.author_photo | relative_url }}" alt="{{ page.author | escape }}">{% endif %}
@@ -912,6 +943,23 @@ body.et-dark-mode .article-continue-card strong{
 </footer>
 
 <script src="{{ '/assets/site.js' | relative_url }}"></script>
+<script>
+(function(){
+  var buttons=document.querySelectorAll('.article-copy-link,.article-top-copy-link');
+  buttons.forEach(function(button){
+    button.addEventListener('click',function(){
+      if(!navigator.clipboard) return;
+      navigator.clipboard.writeText(window.location.href).then(function(){
+        var original=button.textContent;
+        button.textContent='Copied';
+        setTimeout(function(){button.textContent=original},1600);
+      });
+    });
+  });
+})();
+</script>
+
+
 
 <script>
 (function(){

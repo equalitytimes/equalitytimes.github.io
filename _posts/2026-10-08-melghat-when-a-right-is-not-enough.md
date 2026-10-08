@@ -11,7 +11,7 @@ excerpt: Melghat raises an important question about what happens after a legal
   Community Forest Rights under the Constitution, PESA and the Forest Rights
   Act, and examines how these rights work in practice through documented
   experiences from Melghat.
-cover_image: /media/article-images/53539.png
+cover_image: /media/article-images/53542.png
 tags:
   - "Constitutional law "
   - "Melghat "

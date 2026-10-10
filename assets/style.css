@@ -2055,3 +2055,22 @@ body.et-dark-mode .et-heading-line{background:#f4c400!important}
     padding-top:0 !important;
   }
 }
+
+/* ===== ARTICLE TABLE-OF-CONTENTS ANCHOR OFFSET ===== */
+/* Keep tapped section headings visible below the mobile site header. */
+.article-content h2,
+.article-content h3,
+.et-article-content h2,
+.et-article-content h3,
+[id] {
+  scroll-margin-top: 120px;
+}
+
+@media (max-width: 900px) {
+  .article-content h2,
+  .article-content h3,
+  .et-article-content h2,
+  .et-article-content h3 {
+    scroll-margin-top: 190px;
+  }
+}

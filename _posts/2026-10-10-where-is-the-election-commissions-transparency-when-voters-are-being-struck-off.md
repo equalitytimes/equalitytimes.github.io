@@ -124,11 +124,4 @@ Being answerable to citizens is the Commission’s moral duty, and it is also wh
 17. Twelve-year estimate (same NewsBytes report as note 16): https://www.newsbytesapp.com/news/politics/bengal-sir-tribunals-face-12-year-backlog/story
 
 18. RTI figures: https://www.nationalheraldindia.com/national/bengal-91-percent-of-sir-appeals-result-in-restored-voter-names-as-per-rti-reply
-
-19. Delhi petition figures: https://www.livelaw.in/top-stories/delhi-sir-supreme-court-to-hear-plea-seeking-disclosure-of-voters-issued-notices-grounds-for-logical-discrepancies-550435
-
-20. Delhi analysis: https://m.thewire.in/article/government/analysis-and-explainer-on-how-the-sir-excluded-voters-at-scale
-
-21. Supreme Court query on Delhi notices: https://www.newslaundry.com/2026/09/26/eci-revises-sir-notices-after-indian-express-report-and-puts-out-a-unity-photo
-
-22. INDIA bloc memorandum, 9 Oct 2026: https://indiatvnews.com/news/india/india-bloc-leaders-meet-president-droupadi-murmu-submit-4-point-memorandum-vote-chori-proof-rahul-gandhi-kharge-mamata-banerjee-latest-updates-2026-10-09-1056580
+-banerjee-latest-updates-2026-10-09-1056580

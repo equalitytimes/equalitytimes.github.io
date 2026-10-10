@@ -131,4 +131,6 @@ Being answerable to citizens is the Commission’s moral duty, and it is also wh
 
 21. Supreme Court query on Delhi notices: [Newslaundry](https://www.newslaundry.com/2026/09/26/eci-revises-sir-notices-after-indian-express-report-and-puts-out-a-unity-photo)
 
-22. INDIA bloc memorandum, 9 Oct 2026: [India TV](https://indiatvnews.com/news/india/india-bloc-leaders-meet-president-droupadi-murmu-submit-4-point-memorandum-vote-chori-proof-rahul-gandhi-kharge-mamata-banerjee-latest-updates-2026-10-09-1056580).
+22. INDIA bloc memorandum, 9 Oct 2026: [India TV](https://indiatvnews.com/news/india/india-bloc-leaders-meet-president-droupadi-murmu-submit-4-point-memorandum-vote-chori-proof-rahul-gandhi-kharge-mamata-banerjee-latest-updates-2026-10-09-1056580)
+
+Disclaimer: This article is published as an opinion piece for public discussion and legal awareness. The views expressed are those of the author and do not necessarily reflect the views of Equality Times. The article should not be treated as legal advice.

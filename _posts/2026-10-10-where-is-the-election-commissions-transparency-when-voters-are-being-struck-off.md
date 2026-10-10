@@ -89,46 +89,46 @@ Being answerable to citizens is the Commission’s moral duty, and it is also wh
 
 ## References
 
-1. The Indian Express investigation, 23 Sept 2026 (reporter Ritika Chopra); summarised at https://www.thequint.com/news/breaking-news/election-commission-sir-dissent-sandhu-gyanesh-kumar
+1. The Indian Express investigation, 23 Sept 2026 (reporter Ritika Chopra); summarised at [The Quint](https://www.thequint.com/news/breaking-news/election-commission-sir-dissent-sandhu-gyanesh-kumar)
 
-2. Joshi’s 16 April objection: https://theprobe.in/governance/election-commission-press-note-fixes-what-it-said-wasnt-broken-12581681
+2. Joshi’s 16 April objection: [The Probe](https://theprobe.in/governance/election-commission-press-note-fixes-what-it-said-wasnt-broken-12581681)
 
-3. Letters to the Cabinet Secretary: https://www.deccanherald.com/amp/story/india/explained-ec-dissent-row-form-6-it-oversight-more-what-sandhu-and-joshi-flagged-how-poll-panel-responded-4161381
+3. Letters to the Cabinet Secretary: [Deccan Herald](https://www.deccanherald.com/amp/story/india/explained-ec-dissent-row-form-6-it-oversight-more-what-sandhu-and-joshi-flagged-how-poll-panel-responded-4161381)
 
-4. ECI Press Note No. ECI/PN/120/2026, 26.09.2026: https://www.eci.gov.in/eci/public/api/document?id=17536
+4. ECI Press Note No. ECI/PN/120/2026, 26.09.2026: [Election Commission of India](https://www.eci.gov.in/eci/public/api/document?id=17536)
 
-5. Form 6 objections (same Deccan Herald explainer as note 3): https://www.deccanherald.com/amp/story/india/explained-ec-dissent-row-form-6-it-oversight-more-what-sandhu-and-joshi-flagged-how-poll-panel-responded-4161381
+5. Form 6 objections (same Deccan Herald explainer as note 3): [Deccan Herald](https://www.deccanherald.com/amp/story/india/explained-ec-dissent-row-form-6-it-oversight-more-what-sandhu-and-joshi-flagged-how-poll-panel-responded-4161381)
 
-6. CJI on Form 6, 5 Oct 2026: https://www.livelaw.in/top-stories/supreme-court-says-modified-form-6-not-approved-by-it-election-commission-pleas-against-cec-gyanesh-kumar-unilateral-sir-decisions-553100
+6. CJI on Form 6, 5 Oct 2026: [LiveLaw](https://www.livelaw.in/top-stories/supreme-court-says-modified-form-6-not-approved-by-it-election-commission-pleas-against-cec-gyanesh-kumar-unilateral-sir-decisions-553100)
 
-7. ECI officials’ response: https://thefederal.com/category/news/form-6-sir-row-ec-declaration-separate-from-voter-enrolment-form-258654
+7. ECI officials’ response: [The Federal](https://thefederal.com/category/news/form-6-sir-row-ec-declaration-separate-from-voter-enrolment-form-258654)
 
-8. Scroll explainer on Form 6: https://scroll.in/article/1096208/explainer-why-the-election-commissions-form-6-for-new-voters-has-triggered-a-legal-row
+8. Scroll explainer on Form 6: [Scroll](https://scroll.in/article/1096208/explainer-why-the-election-commissions-form-6-for-new-voters-has-triggered-a-legal-row)
 
-9. Bihar SIR judgment, 27 May 2026: https://www.livelaw.in/top-stories/sir-meets-proportionality-test-conclusions-from-supreme-court-judgment-535887
+9. Bihar SIR judgment, 27 May 2026: [LiveLaw](https://www.livelaw.in/top-stories/sir-meets-proportionality-test-conclusions-from-supreme-court-judgment-535887)
 
-10. On Lal Babu Hussein: https://theprint.in/judiciary/being-in-electoral-rolls-no-lifelong-guarantee-what-sc-said-on-1995-judgment-at-heart-of-sir-verdict/2942956/ and https://www.scobserver.in/reports/supreme-court-backs-bihar-sir-exercise-upholds-ecis-powers-to-purify-electoral-rolls/
+10. On Lal Babu Hussein: [The Print](https://theprint.in/judiciary/being-in-electoral-rolls-no-lifelong-guarantee-what-sc-said-on-1995-judgment-at-heart-of-sir-verdict/2942956/) and [Supreme Court Observer](https://www.scobserver.in/reports/supreme-court-backs-bihar-sir-exercise-upholds-ecis-powers-to-purify-electoral-rolls/)
 
-11. Booth-wise list of 65 lakh names: https://www.deccanherald.com/amp/story/india%2Fbihar-sir-claims-objections-can-be-filed-beyond-september-1-deadline-ec-tells-sc-3706527
+11. Booth-wise list of 65 lakh names: [Deccan Herald](https://www.deccanherald.com/amp/story/india%2Fbihar-sir-claims-objections-can-be-filed-beyond-september-1-deadline-ec-tells-sc-3706527)
 
-12. Online claims with Aadhaar: https://www.tribuneindia.com/news/india/excluded-bihar-voters-can-submit-online-claims-with-aadhaar-or-11-other-documents-sc
+12. Online claims with Aadhaar: [The Tribune](https://www.tribuneindia.com/news/india/excluded-bihar-voters-can-submit-online-claims-with-aadhaar-or-11-other-documents-sc)
 
-13. ECI affidavit calling the charges “exaggerated”: https://www.tribuneindia.com/news/india/charges-of-mass-voter-deletion-in-bengal-exaggerated-ec-tells-sc
+13. ECI affidavit calling the charges “exaggerated”: [The Tribune](https://www.tribuneindia.com/news/india/charges-of-mass-voter-deletion-in-bengal-exaggerated-ec-tells-sc)
 
-14. Bengal removal figures: https://www.newsonair.gov.in/assembly-election-2026-eci-revises-voter-list-removing-over-91-lakh-names-in-west-bengal
+14. Bengal removal figures: [News on AIR](https://www.newsonair.gov.in/assembly-election-2026-eci-revises-voter-list-removing-over-91-lakh-names-in-west-bengal)
 
-15. ECI affidavit, appeals breakdown: https://www.livelaw.in/amp/top-stories/supreme-court-west-bengal-sir-eci-affidavit-over-22-lakh-appeals-against-exclusion-of-voters-16-lakh-against-inclusion-551110
+15. ECI affidavit, appeals breakdown: [LiveLaw](https://www.livelaw.in/amp/top-stories/supreme-court-west-bengal-sir-eci-affidavit-over-22-lakh-appeals-against-exclusion-of-voters-16-lakh-against-inclusion-551110)
 
-16. Decided and restored appeals: https://www.newsbytesapp.com/news/politics/bengal-sir-tribunals-face-12-year-backlog/story
+16. Decided and restored appeals: [NewsBytes](https://www.newsbytesapp.com/news/politics/bengal-sir-tribunals-face-12-year-backlog/story)
 
-17. Twelve-year estimate (same NewsBytes report as note 16): https://www.newsbytesapp.com/news/politics/bengal-sir-tribunals-face-12-year-backlog/story
+17. Twelve-year estimate (same NewsBytes report as note 16): [NewsBytes](https://www.newsbytesapp.com/news/politics/bengal-sir-tribunals-face-12-year-backlog/story)
 
-18. RTI figures: https://www.nationalheraldindia.com/national/bengal-91-percent-of-sir-appeals-result-in-restored-voter-names-as-per-rti-reply
+18. RTI figures: [National Herald](https://www.nationalheraldindia.com/national/bengal-91-percent-of-sir-appeals-result-in-restored-voter-names-as-per-rti-reply)
 
-19. Delhi petition figures: https://www.livelaw.in/top-stories/delhi-sir-supreme-court-to-hear-plea-seeking-disclosure-of-voters-issued-notices-grounds-for-logical-discrepancies-550435
+19. Delhi petition figures: [LiveLaw](https://www.livelaw.in/top-stories/delhi-sir-supreme-court-to-hear-plea-seeking-disclosure-of-voters-issued-notices-grounds-for-logical-discrepancies-550435)
 
-20. Delhi analysis: https://m.thewire.in/article/government/analysis-and-explainer-on-how-the-sir-excluded-voters-at-scale
+20. Delhi analysis: [The Wire](https://m.thewire.in/article/government/analysis-and-explainer-on-how-the-sir-excluded-voters-at-scale)
 
-21. Supreme Court query on Delhi notices: https://www.newslaundry.com/2026/09/26/eci-revises-sir-notices-after-indian-express-report-and-puts-out-a-unity-photo
+21. Supreme Court query on Delhi notices: [Newslaundry](https://www.newslaundry.com/2026/09/26/eci-revises-sir-notices-after-indian-express-report-and-puts-out-a-unity-photo)
 
-22. INDIA bloc memorandum, 9 Oct 2026: https://indiatvnews.com/news/india/india-bloc-leaders-meet-president-droupadi-murmu-submit-4-point-memorandum-vote-chori-proof-rahul-gandhi-kharge-mamata-banerjee-latest-updates-2026-10-09-1056580.
+22. INDIA bloc memorandum, 9 Oct 2026: [India TV](https://indiatvnews.com/news/india/india-bloc-leaders-meet-president-droupadi-murmu-submit-4-point-memorandum-vote-chori-proof-rahul-gandhi-kharge-mamata-banerjee-latest-updates-2026-10-09-1056580).

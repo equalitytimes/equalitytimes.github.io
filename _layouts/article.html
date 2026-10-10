@@ -699,6 +699,14 @@ body.et-dark-mode .article-continue-card strong{
   }
 }
 
+/* Correct anchor landing position for the tall fixed mobile header. */
+.article-content-wrap .article-content h2,
+.article-content-wrap .article-content h3{scroll-margin-top:150px}
+@media(max-width:900px){
+  .article-content-wrap .article-content h2,
+  .article-content-wrap .article-content h3{scroll-margin-top:310px}
+}
+
 @media(max-width:640px){
   .article-page{
     padding:36px 0 60px;

@@ -19,6 +19,7 @@ excerpt: An examination of how labour exploitation, poverty and inadequate
   healthcare are pushing sugarcane-cutting women in Maharashtra towards
   hysterectomy, raising serious questions about women's rights, dignity and
   reproductive autonomy.
+cover_image: /media/article-images/61152-1.png
 tags:
   - Sugarcane Workers
   - " Women's Reproductive Rights"

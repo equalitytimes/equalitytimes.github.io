@@ -64,5 +64,5 @@ India's success in reducing poverty is a matter of pride, and there is no reason
 
 The true measure of development is what has changed on the plate, in the school, in the clinic and in the work available to the person standing in the last row of society. Even if the figures bring joy, looking beyond them to the reality on the ground is the real test of responsible policymakers and alert citizens. The eradication of poverty is only the first stage of the journey. Equality, dignity and a secure life are the second, and harder, stage that still lies ahead.
 
----
+
 Disclaimer: The views expressed are solely those of the author and do not necessarily reflect the views of Equality Times.
